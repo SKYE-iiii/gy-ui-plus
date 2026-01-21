@@ -48,8 +48,8 @@ import { JButton, JTable } from 'gy-ui-plus'
 import 'gy-ui-plus/dist/gy-ui-plus.css'
 
 const app = createApp(App)
-app.component('JButton', JButton)
-app.component('JTable', JTable)
+app.component('GyButton', GyButton)
+app.component('GyTable', GyTable)
 app.mount('#app')
 ```
 
@@ -87,8 +87,8 @@ gy-ui-plus/
 ├── packages/             # 组件源码目录
 │   ├── index.ts         # 组件库入口
 │   ├── withInstall.ts   # 组件安装工具
-│   ├── j-button/        # 按钮组件
-│   └── j-table/         # 表格组件
+│   ├── gy-button/        # 按钮组件
+│   └── gy-table/         # 表格组件
 ├── dist/                # 构建输出目录
 ├── vite.config.ts       # Vite 配置
 ├── tsconfig.json        # TypeScript 配置
@@ -105,10 +105,10 @@ MIT License
 
 ## 联系方式
 
-如有问题或建议，欢迎通过以下方式联系：
+<!-- 如有问题或建议，欢迎通过以下方式联系： -->
 
-- GitHub Issues:
-- Email: your.email@example.com
+<!-- - GitHub Issues:
+- Email: -->
 
 ---
 
