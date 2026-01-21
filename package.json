@@ -5,7 +5,7 @@
   },
   "author": "zyj",
   "license": "MIT",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "private": false,
   "type": "module",
   "main": "dist/gy-ui-plus.umd.js",
