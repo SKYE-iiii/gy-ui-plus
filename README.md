@@ -44,7 +44,7 @@ app.mount('#app')
 ```typescript
 import { createApp } from 'vue'
 import App from './App.vue'
-import { JButton, JTable } from 'gy-ui-plus'
+import { GyButton, GyTable } from 'gy-ui-plus'
 import 'gy-ui-plus/dist/gy-ui-plus.css'
 
 const app = createApp(App)
@@ -107,8 +107,8 @@ MIT License
 
 <!-- 如有问题或建议，欢迎通过以下方式联系： -->
 
-<!-- - GitHub Issues:
-- Email: -->
+- GitHub Issues: https://github.com/SKYE-iiii/gy-ui-plus/issues
+<!-- - Email: -->
 
 ---
 
