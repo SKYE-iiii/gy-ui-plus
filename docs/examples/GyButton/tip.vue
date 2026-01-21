@@ -1,14 +1,14 @@
 <template>
   <div class="demo-container">
-    <GyButton text style="font-size: 28px" tip="编辑" icon="Edit" />
-    <GyButton text tip="删除" icon="Delete" />
-    <GyButton link tip="primary" icon="Search" />
-    <GyButton text tip="primary" icon="Search" />
-    <GyButton text type="primary" tip="primary" icon="Edit" />
-    <GyButton text type="success" tip="success" icon="Check" />
-    <GyButton text type="info" tip="info" icon="Message" />
-    <GyButton text type="warning" tip="warning" icon="Star" />
-    <GyButton
+    <gy-button text style="font-size: 28px" tip="编辑" icon="Edit" />
+    <gy-button text tip="删除" icon="Delete" />
+    <gy-button link tip="primary" icon="Search" />
+    <gy-button text tip="primary" icon="Search" />
+    <gy-button text type="primary" tip="primary" icon="Edit" />
+    <gy-button text type="success" tip="success" icon="Check" />
+    <gy-button text type="info" tip="info" icon="Message" />
+    <gy-button text type="warning" tip="warning" icon="Star" />
+    <gy-button
       text
       type="danger"
       tip="danger"

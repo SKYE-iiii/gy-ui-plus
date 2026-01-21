@@ -1,6 +1,6 @@
 <template>
   <el-tooltip v-if="tip" :content="tip" :placement="placement" v-bind="tipProps">
-    <el-button v-bind="$attrs" class="t-button-tip" @click="handleClick">
+    <el-button v-bind="$attrs" class="gy-button-tip" @click="handleClick">
       <slot />
     </el-button>
   </el-tooltip>
@@ -14,7 +14,7 @@ import { ref } from 'vue'
 import type { GyButtonSelfProps as GyButtonProps } from './type'
 
 defineOptions({
-  name: 'TButton',
+  name: 'GyButton',
 })
 
 const props = withDefaults(defineProps<GyButtonProps>(), {

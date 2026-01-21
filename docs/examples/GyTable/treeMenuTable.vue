@@ -1,68 +1,62 @@
 <template>
-  <t-layout-page class="dept_mange">
-    <t-layout-page-item>
-      <t-table
-        title="菜单管理"
-        row-key="path"
-        isTree
-        :table="table"
-        :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
-        :columns="table.columns"
-        :isShowPagination="false"
-        align="left"
-        :key="isKey"
-        ref="TreeTableRef"
-        :default-expand-all="isExpandAll"
-        @selection-change="selectionChange"
-      >
-        <template #title>
-          <el-alert :closable="false" type="success">
-            <template #title>
-              <div style="display: flex; align-items: center">
-                <div>
-                  {{ state.ids.length ? `已选择${state.ids.length}条数据` : "未选中任何记录" }}
-                </div>
-                <el-button
-                  style="margin-left: 10px"
-                  type="primary"
-                  link
-                  :disabled="state.ids.length < 1"
-                  @click="cancelSelect"
-                  >取消</el-button
-                >
+  <gy-layout-page class="dept_mange">
+    <gy-table
+      title="菜单管理"
+      row-key="path"
+      isTree
+      :table="table"
+      :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
+      :columns="table.columns"
+      :isShowPagination="false"
+      align="left"
+      :key="isKey"
+      ref="TreeTableRef"
+      :default-expand-all="isExpandAll"
+      @selection-change="selectionChange"
+    >
+      <template #title>
+        <el-alert :closable="false" type="success">
+          <template #title>
+            <div style="display: flex; align-items: center">
+              <div>
+                {{ state.ids.length ? `已选择${state.ids.length}条数据` : '未选中任何记录' }}
               </div>
-            </template>
-          </el-alert>
-        </template>
-        <template #toolbar>
-          <el-button
-            size="default"
-            type="danger"
-            @click="toggleSelection([table.data[1], table.data[2]])"
-            >{{ !isSelectRow ? "点击选中" : "点击取消" }}第二第三项</el-button
-          >
-          <el-button size="default" type="primary" @click="expandAll"
-            >全部{{ !isExpandAll ? "展开" : "收起" }}</el-button
-          >
-          <el-button size="default" type="primary" @click="expandRow(6, true)"
-            >展开第七行</el-button
-          >
-          <el-button size="default" type="primary" @click="expandRow(6, false)"
-            >收起第七行</el-button
-          >
-        </template>
-      </t-table>
-    </t-layout-page-item>
-  </t-layout-page>
+              <el-button
+                style="margin-left: 10px"
+                type="primary"
+                link
+                :disabled="state.ids.length < 1"
+                @click="cancelSelect"
+                >取消</el-button
+              >
+            </div>
+          </template>
+        </el-alert>
+      </template>
+      <template #toolbar>
+        <el-button
+          size="default"
+          type="danger"
+          @click="toggleSelection([table.data[1], table.data[2]])"
+          >{{ !isSelectRow ? '点击选中' : '点击取消' }}第二第三项</el-button
+        >
+        <el-button size="default" type="primary" @click="expandAll"
+          >全部{{ !isExpandAll ? '展开' : '收起' }}</el-button
+        >
+        <el-button size="default" type="primary" @click="expandRow(6, true)">展开第七行</el-button>
+        <el-button size="default" type="primary" @click="expandRow(6, false)">收起第七行</el-button>
+      </template>
+    </gy-table>
+  </gy-layout-page>
 </template>
 
 <script setup lang="tsx">
-import { onMounted, reactive, ref } from "vue"
-import menuData from "./menu1.json"
+import { onMounted, reactive, ref } from 'vue'
+import menuData from './menu1.json'
 const TreeTableRef: any = ref<HTMLElement | null>(null)
 // 选择复选框
 const selectionChange = (val: any) => {
-  console.log("选择复选框", val)
+  console.log('选择复选框', val)
   state.ids = val
 }
 // 是否全部展开
@@ -85,23 +79,23 @@ const isSelectRow = ref(false)
 const toggleSelection = (rows?: any) => {
   isSelectRow.value = !isSelectRow.value
   if (rows) {
-    rows.forEach(row => {
+    rows.forEach((row) => {
       TreeTableRef.value?.toggleRowSelection(row, isSelectRow.value)
       TreeTableRef.value?.toggleRowExpansion(row, isSelectRow.value)
     })
   }
 }
 const edit = (row: any) => {
-  console.log("编辑", row)
+  console.log('编辑', row)
 }
 const handleAdd = (row: any) => {
-  console.log("表格内新增", row)
+  console.log('表格内新增', row)
 }
 // 取消选中
 const cancelSelect = () => {
-  console.log("取消选中", TreeTableRef.value)
+  console.log('取消选中', TreeTableRef.value)
   if (state.ids.length > 0) {
-    console.log("取消选中222", TreeTableRef.value)
+    console.log('取消选中222', TreeTableRef.value)
     TreeTableRef.value.clearSelection()
   }
 }
@@ -109,48 +103,48 @@ const state: any = reactive({
   ids: [],
   queryData: {
     title: null, // 菜单名称
-    path: null // 菜单路径
-  }
+    path: null, // 菜单路径
+  },
 })
 const table = reactive<TableTypes.Table>({
   data: [],
-  firstColumn: { type: "selection", fixed: true },
+  firstColumn: { type: 'selection', fixed: true },
   columns: [
     {
-      label: "菜单名称",
+      label: '菜单名称',
       render: (text: any, row: any) => {
         return <div>{row.meta.title}</div>
       },
-      minWidth: 180
+      minWidth: 180,
     },
     {
-      label: "菜单图标",
+      label: '菜单图标',
       render: (text: any, row: any) => {
         return <t-icon icon={row.meta.icon}></t-icon>
       },
-      minWidth: 80
+      minWidth: 80,
     },
-    { prop: "name", label: "菜单 name", minWidth: 180 },
-    { prop: "path", label: "菜单路径", minWidth: 180 },
-    { prop: "component", label: "组件路径", minWidth: 180 }
+    { prop: 'name', label: '菜单 name', minWidth: 180 },
+    { prop: 'path', label: '菜单路径', minWidth: 180 },
+    { prop: 'component', label: '组件路径', minWidth: 180 },
   ],
   operator: [
     {
-      text: "新增",
-      fun: handleAdd
+      text: '新增',
+      fun: handleAdd,
     },
     {
-      text: "编辑",
-      fun: edit
-    }
+      text: '编辑',
+      fun: edit,
+    },
   ],
   // 操作列样式
   operatorConfig: {
-    fixed: "right", // 固定列表右边（left则固定在左边）
-    align: "left",
-    width: "160",
-    label: "操作"
-  }
+    fixed: 'right', // 固定列表右边（left则固定在左边）
+    align: 'left',
+    width: '160',
+    label: '操作',
+  },
 })
 onMounted(() => {
   getMenuData()

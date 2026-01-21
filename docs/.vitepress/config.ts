@@ -1,11 +1,13 @@
 import { defineConfig } from 'vitepress'
-import { mdPlugin } from "./plugins/mdPlugin"
+import { mdPlugin } from './plugins/mdPlugin'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+
 export default defineConfig({
   title: 'GY-UI-Plus',
   description: '一个基于 Vue 3 的 UI 组件库',
   markdown: {
     lineNumbers: true,
-    config: (md: any) => mdPlugin(md)
+    config: (md: any) => mdPlugin(md),
   },
   themeConfig: {
     nav: [
@@ -24,6 +26,7 @@ export default defineConfig({
     ],
   },
   vite: {
+    plugins: [vueJsx() as any],
     resolve: {
       alias: {
         '@': '/packages',

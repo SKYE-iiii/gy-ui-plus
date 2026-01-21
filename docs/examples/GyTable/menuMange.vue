@@ -1,23 +1,22 @@
 <template>
-  <t-layout-page class="dept_mange">
-    <t-layout-page-item>
-      <t-table
-        class="menu_mange"
-        title="菜单管理页面"
-        row-key="path"
-        isTree
-        align="left"
-        :table="table"
-        :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
-        :columns="table.columns"
-        :isShowPagination="false"
-      >
-        <template #toolbar>
-          <el-button type="primary" @click="createHandle">新增菜单</el-button>
-        </template>
-      </t-table>
-    </t-layout-page-item>
-    <el-dialog :title="title" width="50%" draggable v-model="addDialog">
+  <gy-layout-page class="dept_mange">
+    <gy-table
+      class="menu_mange"
+      title="菜单管理页面"
+      row-key="path"
+      isTree
+      align="left"
+      :table="table"
+      :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
+      :columns="table.columns"
+      :isShowPagination="false"
+    >
+      <template #toolbar>
+        <el-button type="primary" @click="createHandle">新增菜单</el-button>
+      </template>
+    </gy-table>
+
+    <!-- <el-dialog :title="title" width="50%" draggable v-model="addDialog">
       <t-form
         v-model="formOpts.ref"
         :formOpts="formOpts"
@@ -30,15 +29,15 @@
           <el-button type="primary" @click="addConfirm">确定</el-button>
         </div>
       </template>
-    </el-dialog>
-  </t-layout-page>
+    </el-dialog> -->
+  </gy-layout-page>
 </template>
 
 <script setup lang="tsx" name="menuMange">
-import { onMounted, reactive, ref } from "vue"
-import { ElMessageBox, ElMessage } from "element-plus"
-import { Warning } from "@element-plus/icons-vue"
-import menuData from "./menu1.json"
+import { onMounted, reactive, ref } from 'vue'
+import { ElMessageBox, ElMessage } from 'element-plus'
+import { Warning } from '@element-plus/icons-vue'
+import menuData from './menu1.json'
 interface MenuOptions {
   menuId: number
   parentId: number // 上级菜单
@@ -61,14 +60,14 @@ interface MetaProps {
   isAffix: boolean // 是否固定在 tabs nav
   isKeepAlive: boolean // 是否缓存
 }
-const title = ref("新增菜单")
+const title = ref('新增菜单')
 const addDialog = ref(false)
 const menuOptions = ref<MenuOptions[]>([])
 const formOpts = reactive<FormTypes.FormOpts>({
   ref: null,
   formData: {
     parentId: 0, // 上级菜单
-    menuType: "M", // 菜单类型
+    menuType: 'M', // 菜单类型
     title: null, // 菜单名称
     orderNum: 0, // 显示排序
     icon: undefined, // 菜单图标
@@ -81,74 +80,74 @@ const formOpts = reactive<FormTypes.FormOpts>({
     activeMenu: null, // 高亮菜单
     path: null, // 路由地址
     component: null, // 组件路径
-    remark: null // 备注
+    remark: null, // 备注
   },
   fieldList: [
     {
-      label: "上级菜单",
-      value: "parentId",
-      comp: "el-cascader",
+      label: '上级菜单',
+      value: 'parentId',
+      comp: 'el-cascader',
       isSelfCom: true,
       bind: {
         props: {
           checkStrictly: true,
           emitPath: false,
-          children: "children",
-          label: "label",
-          value: "menuId"
+          children: 'children',
+          label: 'label',
+          value: 'menuId',
         },
-        "show-all-levels": false,
-        options: []
+        'show-all-levels': false,
+        options: [],
       },
-      widthSize: 1
+      widthSize: 1,
     },
     {
-      label: "菜单类型",
-      value: "menuType",
-      type: "radio",
-      list: "menuTypeList",
-      comp: "el-radio-group",
-      arrKey: "value",
+      label: '菜单类型',
+      value: 'menuType',
+      type: 'radio',
+      list: 'menuTypeList',
+      comp: 'el-radio-group',
+      arrKey: 'value',
       eventHandle: {
-        change: (val: any) => menuTypeChange(val)
-      }
+        change: (val: any) => menuTypeChange(val),
+      },
     },
     {
-      label: "是否隐藏",
-      value: "isHide",
-      type: "radio",
-      list: "isHideList",
-      comp: "el-radio-group",
-      arrKey: "value"
+      label: '是否隐藏',
+      value: 'isHide',
+      type: 'radio',
+      list: 'isHideList',
+      comp: 'el-radio-group',
+      arrKey: 'value',
     },
-    { label: "菜单名称", value: "title", type: "input", comp: "el-input" },
+    { label: '菜单名称', value: 'title', type: 'input', comp: 'el-input' },
     {
-      label: "显示排序",
-      value: "orderNum",
-      type: "inputNumber",
-      comp: "el-input-number",
-      bind: { "controls-position": "right", min: 0 }
+      label: '显示排序',
+      value: 'orderNum',
+      type: 'inputNumber',
+      comp: 'el-input-number',
+      bind: { 'controls-position': 'right', min: 0 },
     },
-    { label: "菜单图标", value: "icon", comp: "t-select-icon", isSelfCom: true },
+    { label: '菜单图标', value: 'icon', comp: 't-select-icon', isSelfCom: true },
     {
-      label: "是否外链",
-      value: "isShowLink",
-      type: "radio",
-      list: "whetherList",
-      comp: "el-radio-group",
-      event: "isShowLink",
-      arrKey: "value"
-    },
-    {
-      label: "是否全屏",
-      value: "isFull",
-      type: "radio",
-      list: "whetherList",
-      comp: "el-radio-group",
-      arrKey: "value"
+      label: '是否外链',
+      value: 'isShowLink',
+      type: 'radio',
+      list: 'whetherList',
+      comp: 'el-radio-group',
+      event: 'isShowLink',
+      arrKey: 'value',
     },
     {
-      label: "是否固定",
+      label: '是否全屏',
+      value: 'isFull',
+      type: 'radio',
+      list: 'whetherList',
+      comp: 'el-radio-group',
+      arrKey: 'value',
+    },
+    {
+      label: '是否固定',
       labelRender: () => {
         return (
           <div style="cursor:pointer;display:flex;align-items:center;">
@@ -161,30 +160,30 @@ const formOpts = reactive<FormTypes.FormOpts>({
           </div>
         )
       },
-      value: "isAffix",
-      type: "radio",
-      list: "whetherList",
-      comp: "el-radio-group",
-      arrKey: "value"
+      value: 'isAffix',
+      type: 'radio',
+      list: 'whetherList',
+      comp: 'el-radio-group',
+      arrKey: 'value',
     },
     {
-      label: "是否缓存",
-      value: "isKeepAlive",
-      type: "radio",
-      list: "whetherList",
-      comp: "el-radio-group",
-      arrKey: "value",
-      widthSize: 1
+      label: '是否缓存',
+      value: 'isKeepAlive',
+      type: 'radio',
+      list: 'whetherList',
+      comp: 'el-radio-group',
+      arrKey: 'value',
+      widthSize: 1,
     },
     {
-      label: "外链地址",
-      value: "isLink",
-      type: "input",
-      comp: "el-input",
-      isHideItem: true
+      label: '外链地址',
+      value: 'isLink',
+      type: 'input',
+      comp: 'el-input',
+      isHideItem: true,
     },
     {
-      label: "高亮菜单",
+      label: '高亮菜单',
       labelRender: () => {
         return (
           <div style="cursor:pointer;display:flex;align-items:center;">
@@ -197,51 +196,51 @@ const formOpts = reactive<FormTypes.FormOpts>({
           </div>
         )
       },
-      value: "activeMenu",
-      type: "input",
-      comp: "el-input"
+      value: 'activeMenu',
+      type: 'input',
+      comp: 'el-input',
     },
-    { label: "路由地址", value: "path", type: "input", comp: "el-input", widthSize: 1 },
+    { label: '路由地址', value: 'path', type: 'input', comp: 'el-input', widthSize: 1 },
     {
-      label: "组件路径",
-      value: "component",
-      type: "input",
-      comp: "el-input",
+      label: '组件路径',
+      value: 'component',
+      type: 'input',
+      comp: 'el-input',
       isHideItem: true,
-      widthSize: 1
+      widthSize: 1,
     },
-    { label: "备注", value: "remark", type: "input", comp: "el-input", widthSize: 1 }
+    { label: '备注', value: 'remark', type: 'input', comp: 'el-input', widthSize: 1 },
   ],
   rules: {
-    title: [{ required: true, message: "请输入菜单名称", trigger: "blur" }],
-    orderNum: [{ required: true, message: "请输入显示排序", trigger: "blur" }],
-    isLink: [{ required: true, message: "请输入外链地址", trigger: "blur" }],
-    path: [{ required: true, message: "请输入路由地址", trigger: "blur" }],
-    component: [{ required: true, message: "请输入组件路径", trigger: "blur" }]
+    title: [{ required: true, message: '请输入菜单名称', trigger: 'blur' }],
+    orderNum: [{ required: true, message: '请输入显示排序', trigger: 'blur' }],
+    isLink: [{ required: true, message: '请输入外链地址', trigger: 'blur' }],
+    path: [{ required: true, message: '请输入路由地址', trigger: 'blur' }],
+    component: [{ required: true, message: '请输入组件路径', trigger: 'blur' }],
   },
   // 相关列表
   listTypeInfo: {
     whetherList: [
-      { label: "是", value: true },
-      { label: "否", value: false }
+      { label: '是', value: true },
+      { label: '否', value: false },
     ],
     isHideList: [
-      { label: "隐藏", value: true },
-      { label: "显示", value: false }
+      { label: '隐藏', value: true },
+      { label: '显示', value: false },
     ],
     menuTypeList: [
-      { label: "目录", value: "M" },
-      { label: "菜单", value: "C" }
+      { label: '目录', value: 'M' },
+      { label: '菜单', value: 'C' },
       // { label: "按钮", value: "F" }
-    ]
-  }
+    ],
+  },
 })
 // 表单输入--触发change事件
 const handleEvent = (type: any, val: any) => {
-  console.log("handleEvent", type, val)
-  if (type === "isShowLink") {
-    formOpts.fieldList.map(item => {
-      if (item.value === "isLink") {
+  console.log('handleEvent', type, val)
+  if (type === 'isShowLink') {
+    formOpts.fieldList.map((item) => {
+      if (item.value === 'isLink') {
         item.isHideItem = !val
       }
     })
@@ -249,9 +248,9 @@ const handleEvent = (type: any, val: any) => {
 }
 // 菜单类型--change事件
 const menuTypeChange = (val: string) => {
-  const shouldShowComponent = val === "C"
-  formOpts.fieldList.forEach(item => {
-    if (item.value === "component") {
+  const shouldShowComponent = val === 'C'
+  formOpts.fieldList.forEach((item) => {
+    if (item.value === 'component') {
       item.isHideItem = !shouldShowComponent
     }
   })
@@ -262,39 +261,39 @@ const addConfirm = () => {
   formOpts.ref.validate((valid: any) => {
     console.log(88, valid)
     if (!valid) return
-    console.log("最终数据", formOpts.formData)
-    ElMessage.success("新增成功")
+    console.log('最终数据', formOpts.formData)
+    ElMessage.success('新增成功')
     addDialog.value = false
   })
 }
 const handleDelete = (row: any) => {
-  console.log("点击删除", row)
-  ElMessageBox.confirm("此操作将永久删除该文件, 是否继续?", "提示", {
-    confirmButtonText: "确定",
-    cancelButtonText: "取消",
-    type: "warning"
+  console.log('点击删除', row)
+  ElMessageBox.confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+    confirmButtonText: '确定',
+    cancelButtonText: '取消',
+    type: 'warning',
   })
     .then(() => {
       ElMessage.success({
-        message: "删除成功!"
+        message: '删除成功!',
       })
     })
     .catch(() => {
       ElMessage.info({
-        message: "已取消删除"
+        message: '已取消删除',
       })
     })
 }
 const edit = (row: any) => {
-  console.log("编辑", row)
+  console.log('编辑', row)
   addDialog.value = true
-  title.value = "编辑菜单"
+  title.value = '编辑菜单'
   const { parentId, menuType, label, orderNum, isShowLink, path, component, remark, meta } = row
   const { fieldList } = formOpts
-  fieldList.forEach(item => {
+  fieldList.forEach((item) => {
     const shouldShow =
-      (item.value === "component" && menuType === "C") || (item.value === "isLink" && isShowLink)
-    if (item.value === "component" || item.value === "isLink") {
+      (item.value === 'component' && menuType === 'C') || (item.value === 'isLink' && isShowLink)
+    if (item.value === 'component' || item.value === 'isLink') {
       item.isHideItem = !shouldShow
     }
   })
@@ -313,30 +312,30 @@ const edit = (row: any) => {
     activeMenu: meta.activeMenu,
     path,
     component,
-    remark
+    remark,
   }
 }
 const handleAdd = (row: any) => {
-  console.log("表格内新增", row)
+  console.log('表格内新增', row)
   addDialog.value = true
-  title.value = "新增菜单"
+  title.value = '新增菜单'
   resetForm()
-  formOpts.fieldList.forEach(item => {
-    const shouldShow = formOpts.formData.menuType === "C" || formOpts.formData.isShowLink
-    if (item.value === "component" || item.value === "isLink") {
+  formOpts.fieldList.forEach((item) => {
+    const shouldShow = formOpts.formData.menuType === 'C' || formOpts.formData.isShowLink
+    if (item.value === 'component' || item.value === 'isLink') {
       item.isHideItem = !shouldShow
     }
   })
   formOpts.formData.parentId = row.parentId
 }
 const createHandle = () => {
-  console.log("新增")
+  console.log('新增')
   addDialog.value = true
-  title.value = "新增菜单"
+  title.value = '新增菜单'
   resetForm()
-  formOpts.fieldList.forEach(item => {
-    const shouldShow = formOpts.formData.menuType === "C" || formOpts.formData.isShowLink
-    if (item.value === "component" || item.value === "isLink") {
+  formOpts.fieldList.forEach((item) => {
+    const shouldShow = formOpts.formData.menuType === 'C' || formOpts.formData.isShowLink
+    if (item.value === 'component' || item.value === 'isLink') {
       item.isHideItem = !shouldShow
     }
   })
@@ -344,7 +343,7 @@ const createHandle = () => {
 const resetForm = () => {
   formOpts.formData = {
     parentId: 0, // 上级菜单
-    menuType: "M", // 菜单类型
+    menuType: 'M', // 菜单类型
     title: null, // 菜单名称
     orderNum: 0, // 显示排序
     icon: undefined, // 菜单图标
@@ -357,7 +356,7 @@ const resetForm = () => {
     activeMenu: null, // 高亮菜单
     path: null, // 路由地址
     component: null, // 组件路径
-    remark: null // 备注
+    remark: null, // 备注
   }
   formOpts.ref?.resetFields()
 }
@@ -366,58 +365,58 @@ const table = reactive<TableTypes.Table>({
   data: [],
   columns: [
     {
-      label: "菜单名称",
+      label: '菜单名称',
       render: (text: any, row: any) => {
         return <div>{row.meta.title}</div>
       },
-      minWidth: 180
+      minWidth: 180,
     },
     {
-      label: "菜单图标",
+      label: '菜单图标',
       render: (text: any, row: any) => {
         return <t-icon icon={row.meta.icon}></t-icon>
       },
-      minWidth: 80
+      minWidth: 80,
     },
     {
-      prop: "menuType",
-      label: "菜单类型",
+      prop: 'menuType',
+      label: '菜单类型',
       minWidth: 120,
       render: (text: string) => {
         const typeMap: TypeMap = {
-          M: { type: "info", val: "目录" },
-          C: { type: "success", val: "菜单" },
-          F: { type: "warning", val: "按钮" }
+          M: { type: 'info', val: '目录' },
+          C: { type: 'success', val: '菜单' },
+          F: { type: 'warning', val: '按钮' },
         }
         const { type, val } = typeMap[text] || {}
         return <el-tag type={type}>{val}</el-tag>
-      }
+      },
     },
-    { prop: "name", label: "菜单 name", minWidth: 180 },
-    { prop: "path", label: "菜单路径", minWidth: 180 },
-    { prop: "component", label: "组件路径", minWidth: 180 }
+    { prop: 'name', label: '菜单 name', minWidth: 180 },
+    { prop: 'path', label: '菜单路径', minWidth: 180 },
+    { prop: 'component', label: '组件路径', minWidth: 180 },
   ],
   operator: [
     {
-      text: "新增",
-      fun: handleAdd
+      text: '新增',
+      fun: handleAdd,
     },
     {
-      text: "编辑",
-      fun: edit
+      text: '编辑',
+      fun: edit,
     },
     {
-      text: "删除",
-      fun: handleDelete
-    }
+      text: '删除',
+      fun: handleDelete,
+    },
   ],
   // 操作列样式
   operatorConfig: {
-    fixed: "right", // 固定列表右边（left则固定在左边）
-    align: "left",
-    width: "160",
-    label: "操作"
-  }
+    fixed: 'right', // 固定列表右边（left则固定在左边）
+    align: 'left',
+    width: '160',
+    label: '操作',
+  },
 })
 onMounted(() => {
   getMenuData()
@@ -433,18 +432,18 @@ const getMenuData = async () => {
       parentId: 0,
       menuId: 0,
       orderNum: 0,
-      menuType: "M",
-      path: "",
-      component: "",
-      name: "",
+      menuType: 'M',
+      path: '',
+      component: '',
+      name: '',
       meta: {
-        title: "主类目",
+        title: '主类目',
         isHide: false,
         isFull: false,
         isAffix: false,
-        isKeepAlive: false
+        isKeepAlive: false,
       },
-      children: []
+      children: [],
     }
     menu.children = res.data.map((item: any) => {
       return {
@@ -458,15 +457,15 @@ const getMenuData = async () => {
         meta: {
           title: item.menuName,
           icon: item.icon,
-          isHide: item.visible === "0",
-          isFull: item.isFrame === "1",
-          isAffix: item.isAffix === "1",
-          isKeepAlive: item.isKeepAlive === "1",
+          isHide: item.visible === '0',
+          isFull: item.isFrame === '1',
+          isAffix: item.isAffix === '1',
+          isKeepAlive: item.isKeepAlive === '1',
           isLink: item.isLink,
           activeMenu: item.activeMenu,
-          isShowLink: item.isShowLink === "1"
+          isShowLink: item.isShowLink === '1',
         },
-        children: item.children
+        children: item.children,
       }
     })
     arr.push(menu)

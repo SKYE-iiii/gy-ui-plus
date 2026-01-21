@@ -802,14 +802,14 @@
           ]
         },
         {
-          "path": "/assembly/t-select-table",
+          "path": "/assembly/t-selecgy-table",
           "name": "TSelectTable",
           "parentId": 28,
           "menuId": 42,
           "orderNum": 2,
           "menuType": "M",
           "isShowLink": false,
-          "redirect": "/assembly/t-select-table/radio",
+          "redirect": "/assembly/t-selecgy-table/radio",
           "meta": {
             "icon": "MessageBox",
             "title": "下拉表格组件",
@@ -821,7 +821,7 @@
           },
           "children": [
             {
-              "path": "/assembly/t-select-table/radio",
+              "path": "/assembly/t-selecgy-table/radio",
               "name": "radioSelectTable",
               "parentId": 42,
               "menuId": 43,
@@ -840,7 +840,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/radioKeyup",
+              "path": "/assembly/t-selecgy-table/radioKeyup",
               "name": "radioKeyupSelectTable",
               "parentId": 42,
               "menuId": 44,
@@ -859,7 +859,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/dynamic",
+              "path": "/assembly/t-selecgy-table/dynamic",
               "name": "dynamic",
               "parentId": 42,
               "menuId": 45,
@@ -878,7 +878,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/dynamicMultiple",
+              "path": "/assembly/t-selecgy-table/dynamicMultiple",
               "name": "dynamicMultiple",
               "parentId": 42,
               "menuId": 46,
@@ -897,7 +897,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/isShowFirstColumn",
+              "path": "/assembly/t-selecgy-table/isShowFirstColumn",
               "name": "isShowFirstColumn",
               "parentId": 42,
               "menuId": 47,
@@ -916,7 +916,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/radioDefaultSelectVal",
+              "path": "/assembly/t-selecgy-table/radioDefaultSelectVal",
               "name": "radioDefaultSelectVal",
               "parentId": 42,
               "menuId": 48,
@@ -935,7 +935,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/multipleDefaultSelectVal",
+              "path": "/assembly/t-selecgy-table/multipleDefaultSelectVal",
               "name": "multipleDefaultSelectVal",
               "parentId": 42,
               "menuId": 49,
@@ -954,7 +954,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/multiple",
+              "path": "/assembly/t-selecgy-table/multiple",
               "name": "selectTableMultiple",
               "parentId": 42,
               "menuId": 50,
@@ -973,7 +973,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/isShowPagination",
+              "path": "/assembly/t-selecgy-table/isShowPagination",
               "name": "isShowPagination",
               "parentId": 42,
               "menuId": 51,
@@ -992,7 +992,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/isShowQuery",
+              "path": "/assembly/t-selecgy-table/isShowQuery",
               "name": "isShowQuery",
               "parentId": 42,
               "menuId": 52,
@@ -1011,7 +1011,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/isShowQueryMultiple",
+              "path": "/assembly/t-selecgy-table/isShowQueryMultiple",
               "name": "isShowQueryMultiple",
               "parentId": 42,
               "menuId": 53,
@@ -1030,7 +1030,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/isShowQueryBtnBind",
+              "path": "/assembly/t-selecgy-table/isShowQueryBtnBind",
               "name": "isShowQueryBtnBind",
               "parentId": 42,
               "menuId": 54,
@@ -1049,7 +1049,7 @@
               }
             },
             {
-              "path": "/assembly/t-select-table/isShowQuerySpan",
+              "path": "/assembly/t-selecgy-table/isShowQuerySpan",
               "name": "isShowQuerySpan",
               "parentId": 42,
               "menuId": 55,
@@ -1070,14 +1070,14 @@
           ]
         },
         {
-          "path": "/assembly/t-table",
+          "path": "/assembly/gy-table",
           "name": "TTable",
           "parentId": 28,
           "menuId": 56,
           "orderNum": 3,
           "menuType": "M",
           "isShowLink": false,
-          "redirect": "/assembly/t-table/base",
+          "redirect": "/assembly/gy-table/base",
           "meta": {
             "icon": "Menu",
             "title": "TTable组件",
@@ -1089,7 +1089,7 @@
           },
           "children": [
             {
-              "path": "/assembly/t-table/base",
+              "path": "/assembly/gy-table/base",
               "name": "baseTTable",
               "parentId": 56,
               "menuId": 57,
@@ -1108,7 +1108,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/border",
+              "path": "/assembly/gy-table/border",
               "name": "border",
               "parentId": 56,
               "menuId": 58,
@@ -1127,7 +1127,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/columnSetting",
+              "path": "/assembly/gy-table/columnSetting",
               "name": "columnSetting",
               "parentId": 56,
               "menuId": 59,
@@ -1146,7 +1146,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/copy",
+              "path": "/assembly/gy-table/copy",
               "name": "copy",
               "parentId": 56,
               "menuId": 60,
@@ -1165,7 +1165,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/filters",
+              "path": "/assembly/gy-table/filters",
               "name": "filters",
               "parentId": 56,
               "menuId": 61,
@@ -1184,7 +1184,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/headMerge",
+              "path": "/assembly/gy-table/headMerge",
               "name": "headMerge",
               "parentId": 56,
               "menuId": 62,
@@ -1203,7 +1203,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/operator",
+              "path": "/assembly/gy-table/operator",
               "name": "operator",
               "parentId": 56,
               "menuId": 63,
@@ -1222,7 +1222,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/paginationTable",
+              "path": "/assembly/gy-table/paginationTable",
               "name": "paginationTable",
               "parentId": 56,
               "menuId": 64,
@@ -1241,7 +1241,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/radio",
+              "path": "/assembly/gy-table/radio",
               "name": "radio",
               "parentId": 56,
               "menuId": 65,
@@ -1260,7 +1260,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/renderCol",
+              "path": "/assembly/gy-table/renderCol",
               "name": "renderCol",
               "parentId": 56,
               "menuId": 66,
@@ -1279,7 +1279,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/renderHeader",
+              "path": "/assembly/gy-table/renderHeader",
               "name": "renderHeader",
               "parentId": 56,
               "menuId": 67,
@@ -1298,7 +1298,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/selection",
+              "path": "/assembly/gy-table/selection",
               "name": "selection",
               "parentId": 56,
               "menuId": 68,
@@ -1317,7 +1317,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/singleEdit",
+              "path": "/assembly/gy-table/singleEdit",
               "name": "singleEdit",
               "parentId": 56,
               "menuId": 69,
@@ -1336,7 +1336,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/singleEditCell",
+              "path": "/assembly/gy-table/singleEditCell",
               "name": "singleEditCell",
               "parentId": 56,
               "menuId": 70,
@@ -1355,7 +1355,7 @@
               }
             },
             {
-              "path": "/assembly/t-table/slotName",
+              "path": "/assembly/gy-table/slotName",
               "name": "slotName",
               "parentId": 56,
               "menuId": 71,
@@ -2260,14 +2260,14 @@
           }
         },
         {
-          "path": "/assembly/t-antd-select-table",
+          "path": "/assembly/t-antd-selecgy-table",
           "name": "TAntdSelectTable",
           "parentId": 28,
           "menuId": 119,
           "orderNum": 10,
           "menuType": "M",
           "isShowLink": false,
-          "redirect": "/assembly/t-antd-select-table/radio",
+          "redirect": "/assembly/t-antd-selecgy-table/radio",
           "meta": {
             "icon": "MessageBox",
             "title": "Antd下拉选择表格",
@@ -2279,7 +2279,7 @@
           },
           "children": [
             {
-              "path": "/assembly/t-antd-select-table/radio",
+              "path": "/assembly/t-antd-selecgy-table/radio",
               "name": "radioTAntdSelectTable",
               "parentId": 119,
               "menuId": 120,
@@ -2298,7 +2298,7 @@
               }
             },
             {
-              "path": "/assembly/t-antd-select-table/isKeyup",
+              "path": "/assembly/t-antd-selecgy-table/isKeyup",
               "name": "isKeyupTAntdSelectTable",
               "parentId": 119,
               "menuId": 121,
@@ -2317,7 +2317,7 @@
               }
             },
             {
-              "path": "/assembly/t-antd-select-table/radiopagination",
+              "path": "/assembly/t-antd-selecgy-table/radiopagination",
               "name": "radiopaginationTAntdSelectTable",
               "parentId": 119,
               "menuId": 122,
@@ -2336,7 +2336,7 @@
               }
             },
             {
-              "path": "/assembly/t-antd-select-table/radiodefaultSelectVal",
+              "path": "/assembly/t-antd-selecgy-table/radiodefaultSelectVal",
               "name": "radiodefaultSelectValTAntdSelectTable",
               "parentId": 119,
               "menuId": 123,
@@ -2355,7 +2355,7 @@
               }
             },
             {
-              "path": "/assembly/t-antd-select-table/multiple",
+              "path": "/assembly/t-antd-selecgy-table/multiple",
               "name": "multipleTAntdSelectTable",
               "parentId": 119,
               "menuId": 124,
@@ -2374,7 +2374,7 @@
               }
             },
             {
-              "path": "/assembly/t-antd-select-table/multiplepagination",
+              "path": "/assembly/t-antd-selecgy-table/multiplepagination",
               "name": "multiplepaginationTAntdSelectTable",
               "parentId": 119,
               "menuId": 125,
@@ -2393,7 +2393,7 @@
               }
             },
             {
-              "path": "/assembly/t-antd-select-table/multipledefaultSelectVal",
+              "path": "/assembly/t-antd-selecgy-table/multipledefaultSelectVal",
               "name": "multipledefaultSelectValTAntdSelectTable",
               "parentId": 119,
               "menuId": 126,

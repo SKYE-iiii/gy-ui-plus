@@ -2,8 +2,9 @@ import type { Component, App } from 'vue'
 // import ElementPlus from 'element-plus'
 // import 'element-plus/dist/index.css'
 // import locale from 'element-plus/lib/locale/lang/zh-cn' // 因element-plus默认是英文，我们指定一下默认中文
-import GyButton from './gy-button/src/index.vue'
-import GyTable from './gy-table/src/index.vue'
+import GyButton from './button/src/index.vue'
+import GyTable from './table/src/index.vue'
+import GyLayoutPage from './layout-page/src/index.vue'
 
 // 存储组件列表
 const components: {
@@ -11,6 +12,7 @@ const components: {
 } = {
   GyButton,
   GyTable,
+  GyLayoutPage,
 }
 // 插件声明：声明所有插件
 // 插件注册：在 Vue 项目的入口文件中，通过 ( app.use(插件) ) 进行注册
@@ -28,7 +30,7 @@ const install: any = (app: any, router?: any) => {
 }
 
 // 按需引入
-export { GyButton, GyTable }
+export { GyButton, GyTable, GyLayoutPage }
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,

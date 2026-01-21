@@ -12,9 +12,9 @@
         @change="handleChange"
       />
     </div>
-    <GyButton style="margin-top: 15px" color="#626aef" :time="time" @click="exportExcel">
+    <gy-button style="margin-top: 15px" color="#626aef" :time="time" @click="exportExcel">
       导出
-    </GyButton>
+    </gy-button>
   </div>
 </template>
 <script setup lang="ts">
