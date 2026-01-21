@@ -3,7 +3,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.0.2",
+  "author": "zyj",
+  "license": "MIT",
+  "version": "1.0.3",
   "private": false,
   "type": "module",
   "main": "dist/gy-ui-plus.umd.js",
@@ -18,7 +20,9 @@
   },
   "files": [
     "dist",
-    "packages"
+    "packages",
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
