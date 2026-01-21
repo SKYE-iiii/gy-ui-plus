@@ -1,8 +1,12 @@
 import { defineConfig } from 'vitepress'
-
+import { mdPlugin } from "./plugins/mdPlugin"
 export default defineConfig({
   title: 'GY-UI-Plus',
   description: '一个基于 Vue 3 的 UI 组件库',
+  markdown: {
+    lineNumbers: true,
+    config: (md: any) => mdPlugin(md)
+  },
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
