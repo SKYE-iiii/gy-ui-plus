@@ -5,7 +5,7 @@
   },
   "author": "zyj",
   "license": "MIT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "type": "module",
   "main": "dist/gy-ui-plus.umd.js",
@@ -23,6 +23,14 @@
     "packages",
     "README.md",
     "LICENSE"
+  ],
+  "keywords": [
+    "element-plus",
+    "vite",
+    "vue3",
+    "二次封装组件",
+    "封装组件",
+    "components"
   ],
   "engines": {
     "node": "^20.19.0 || >=22.12.0"

@@ -4,5 +4,5 @@ import { withInstall } from '../withInstall'
 export * from './src/tableProps'
 export * from './src/useExpose'
 
-const JTable = withInstall(Table)
-export default JTable
+const GyTable = withInstall(Table)
+export default GyTable
