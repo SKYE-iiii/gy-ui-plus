@@ -1,0 +1,73 @@
+{
+  "name": "gy-ui-plus",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "1.0.2",
+  "private": false,
+  "type": "module",
+  "main": "dist/gy-ui-plus.umd.js",
+  "module": "dist/gy-ui-plus.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/gy-ui-plus.es.js",
+      "require": "./dist/gy-ui-plus.umd.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "packages"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "lib": "vite build",
+    "deploy": "deploy.sh",
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
+    "lint:eslint": "eslint . --fix --cache",
+    "lint": "run-s lint:*",
+    "format": "prettier --write --experimental-cli src/"
+  },
+  "dependencies": {
+    "sortablejs": "1.15.0",
+    "autofit.js": "^3.2.8",
+    "axios": "^1.13.2",
+    "element-plus": "^2.13.1",
+    "pinia": "^3.0.4",
+    "postcss-px-to-viewport": "^1.1.1",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-dts": "^1.7.3",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "@prettier/plugin-oxc": "^0.0.5",
+    "@tsconfig/node24": "^24.0.3",
+    "@types/node": "^24.10.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/tsconfig": "^0.8.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-oxlint": "~1.29.0",
+    "eslint-plugin-vue": "~10.5.1",
+    "jiti": "^2.6.1",
+    "npm-run-all2": "^8.0.4",
+    "oxlint": "~1.29.0",
+    "prettier": "3.6.2",
+    "sass": "^1.97.1",
+    "typescript": "~5.9.0",
+    "vite": "^7.2.4",
+    "vite-plugin-vue-devtools": "^8.0.5",
+    "vue-tsc": "^3.1.5"
+  }
+}
