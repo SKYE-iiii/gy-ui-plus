@@ -1,4 +1,4 @@
-.t-table {
+.gy-table {
   z-index: 0;
   background-color: var(--el-bg-color);
 
@@ -97,8 +97,6 @@
               overflow: visible;
             }
           }
-
-
         }
       }
     }
@@ -244,7 +242,7 @@
     .current-row {
       cursor: pointer;
 
-      >td.el-table__cell {
+      > td.el-table__cell {
         background-color: var(--el-table-current-row-bg-color);
       }
     }

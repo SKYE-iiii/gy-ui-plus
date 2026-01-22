@@ -1,5 +1,10 @@
 <template>
-  <div class="t-table" ref="TTableBox" v-loading="tableLoading" :element-loading-text="loadingTxt">
+  <div
+    class="gy-table"
+    ref="GyTableBox"
+    v-loading="tableLoading"
+    :element-loading-text="loadingTxt"
+  >
     <div
       class="header_wrap"
       :style="{
@@ -441,7 +446,7 @@ const radioVal = ref<number | any>('')
 // 判断单选选中及取消选中
 const forbidden = ref(true)
 // 获取t-table ref
-const TTableBox = ref<HTMLElement | any>(null)
+const GyTableBox = ref<HTMLElement | any>(null)
 // 获取columnSet Ref
 const columnSetRef = ref<HTMLElement | any>(null)
 // 获取form ref
@@ -555,7 +560,7 @@ const defaultRadioSelect = (index: number | any) => {
 // 行拖拽
 const initSort = () => {
   if (!props.isRowSort) return
-  const el = TTableBox.value?.querySelector('.el-table__body-wrapper tbody')
+  const el = GyTableBox.value?.querySelector('.el-table__body-wrapper tbody')
   // console.log('3333', el)
   const handle = props.isRowSortIcon ? '.row_drag' : '.el-table__row'
   Sortable.create(el, {
