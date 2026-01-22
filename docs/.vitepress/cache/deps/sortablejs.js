@@ -1,6 +1,6 @@
 import "./chunk-G3PMV62Z.js";
 
-// node_modules/sortablejs/modular/sortable.esm.js
+// ../node_modules/sortablejs/modular/sortable.esm.js
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {

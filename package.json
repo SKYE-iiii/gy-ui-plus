@@ -6,59 +6,31 @@
   "author": "zyj",
   "license": "MIT",
   "version": "1.0.9",
-  "private": false,
+  "private": true,
   "type": "module",
-  "main": "dist/gy-ui-plus.umd.js",
-  "module": "dist/gy-ui-plus.es.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/gy-ui-plus.es.js",
-      "require": "./dist/gy-ui-plus.umd.js"
-    },
-    "./style.css": "./dist/style.css"
-  },
-  "files": [
-    "dist",
-    "packages",
-    "README.md",
-    "LICENSE"
-  ],
-  "keywords": [
-    "element-plus",
-    "vite",
-    "vue3",
-    "二次封装组件",
-    "封装组件",
-    "components"
-  ],
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": "^20.19.0 || >=22.12.0",
+    "pnpm": ">=8.0.0"
   },
   "scripts": {
-    "lib": "vite build",
+    "lib": "pnpm --filter gy-ui-plus build",
     "deploy": "deploy.sh",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
+    "docs:dev": "pnpm --filter @gy-ui-plus/docs dev",
+    "docs:build": "pnpm --filter @gy-ui-plus/docs build",
+    "docs:preview": "pnpm --filter @gy-ui-plus/docs preview",
     "type-check": "vue-tsc --build",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix --cache",
     "lint": "run-s lint:*",
-    "format": "prettier --write --experimental-cli src/"
-  },
-  "dependencies": {
-    "axios": "^1.13.2",
-    "element-plus": "^2.13.1",
-    "sortablejs": "1.15.0",
-    "vue-router": "^4.6.3"
+    "format": "prettier --write --experimental-cli src/",
+    "dev": "pnpm --filter @gy-ui-plus/docs dev",
+    "build": "pnpm --filter gy-ui-plus build",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
     "@prettier/plugin-oxc": "^0.0.5",
     "@tsconfig/node24": "^24.0.3",
     "@types/node": "^24.10.1",
-    "@vitejs/plugin-vue": "^6.0.2",
-    "@vitejs/plugin-vue-jsx": "^5.1.3",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.39.1",
@@ -70,13 +42,6 @@
     "prettier": "3.6.2",
     "sass": "^1.97.1",
     "typescript": "~5.9.0",
-    "vite": "^7.2.4",
-    "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-dts": "^3.0.0",
-    "vite-plugin-vue-devtools": "^8.0.5",
-    "vite-plugin-vue-setup-extend": "^0.4.0",
-    "vitepress": "^1.6.4",
-    "vue": "^3.5.27",
     "vue-tsc": "^3.1.5"
   }
 }

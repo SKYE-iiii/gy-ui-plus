@@ -1,14 +1,14 @@
 import {
   require_core
-} from "./chunk-QHCNDENE.js";
+} from "./chunk-LFZJEN3U.js";
 import {
   __commonJS,
   __toESM
 } from "./chunk-G3PMV62Z.js";
 
-// docs/node_modules/highlight.js/lib/languages/xml.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/xml.js
 var require_xml = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/xml.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/xml.js"(exports, module) {
     function xml(hljs) {
       const regex = hljs.regex;
       const TAG_NAME_RE = regex.concat(/[\p{L}_]/u, regex.optional(/[\p{L}0-9_.-]*:/u), /[\p{L}0-9_.-]*/u);
@@ -237,9 +237,9 @@ var require_xml = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/bash.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/bash.js
 var require_bash = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/bash.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/bash.js"(exports, module) {
     function bash(hljs) {
       const regex = hljs.regex;
       const VAR = {};
@@ -636,9 +636,9 @@ var require_bash = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/c.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/c.js
 var require_c = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/c.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/c.js"(exports, module) {
     function c(hljs) {
       const regex = hljs.regex;
       const C_LINE_COMMENT_MODE = hljs.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] });
@@ -935,9 +935,9 @@ var require_c = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/cpp.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/cpp.js
 var require_cpp = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/cpp.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/cpp.js"(exports, module) {
     function cpp(hljs) {
       const regex = hljs.regex;
       const C_LINE_COMMENT_MODE = hljs.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] });
@@ -1483,9 +1483,9 @@ var require_cpp = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/csharp.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/csharp.js
 var require_csharp = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/csharp.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/csharp.js"(exports, module) {
     function csharp(hljs) {
       const BUILT_IN_KEYWORDS = [
         "bool",
@@ -1888,9 +1888,9 @@ var require_csharp = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/css.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/css.js
 var require_css = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/css.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/css.js"(exports, module) {
     var MODES = (hljs) => {
       return {
         IMPORTANT: {
@@ -2830,9 +2830,9 @@ var require_css = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/markdown.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/markdown.js
 var require_markdown = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/markdown.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/markdown.js"(exports, module) {
     function markdown(hljs) {
       const regex = hljs.regex;
       const INLINE_HTML = {
@@ -3067,9 +3067,9 @@ var require_markdown = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/diff.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/diff.js
 var require_diff = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/diff.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/diff.js"(exports, module) {
     function diff(hljs) {
       const regex = hljs.regex;
       return {
@@ -3125,9 +3125,9 @@ var require_diff = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/ruby.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/ruby.js
 var require_ruby = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/ruby.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/ruby.js"(exports, module) {
     function ruby(hljs) {
       const regex = hljs.regex;
       const RUBY_METHOD_RE = "([a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?)";
@@ -3543,9 +3543,9 @@ var require_ruby = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/go.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/go.js
 var require_go = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/go.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/go.js"(exports, module) {
     function go(hljs) {
       const LITERALS = [
         "true",
@@ -3702,9 +3702,9 @@ var require_go = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/graphql.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/graphql.js
 var require_graphql = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/graphql.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/graphql.js"(exports, module) {
     function graphql(hljs) {
       const regex = hljs.regex;
       const GQL_NAME = /[_A-Za-z][_0-9A-Za-z]*/;
@@ -3777,9 +3777,9 @@ var require_graphql = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/ini.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/ini.js
 var require_ini = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/ini.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/ini.js"(exports, module) {
     function ini(hljs) {
       const regex = hljs.regex;
       const NUMBERS = {
@@ -3898,9 +3898,9 @@ var require_ini = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/java.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/java.js
 var require_java = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/java.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/java.js"(exports, module) {
     var decimalDigits = "[0-9](_*[0-9])*";
     var frac = `\\.(${decimalDigits})`;
     var hexDigits = "[0-9a-fA-F](_*[0-9a-fA-F])*";
@@ -4157,9 +4157,9 @@ var require_java = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/javascript.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/javascript.js
 var require_javascript = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/javascript.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/javascript.js"(exports, module) {
     var IDENT_RE = "[A-Za-z$_][0-9A-Za-z$_]*";
     var KEYWORDS = [
       "as",
@@ -4863,9 +4863,9 @@ var require_javascript = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/json.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/json.js
 var require_json = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/json.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/json.js"(exports, module) {
     function json(hljs) {
       const ATTRIBUTE = {
         className: "attr",
@@ -4908,9 +4908,9 @@ var require_json = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/kotlin.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/kotlin.js
 var require_kotlin = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/kotlin.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/kotlin.js"(exports, module) {
     var decimalDigits = "[0-9](_*[0-9])*";
     var frac = `\\.(${decimalDigits})`;
     var hexDigits = "[0-9a-fA-F](_*[0-9a-fA-F])*";
@@ -5168,9 +5168,9 @@ var require_kotlin = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/less.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/less.js
 var require_less = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/less.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/less.js"(exports, module) {
     var MODES = (hljs) => {
       return {
         IMPORTANT: {
@@ -6191,9 +6191,9 @@ var require_less = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/lua.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/lua.js
 var require_lua = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/lua.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/lua.js"(exports, module) {
     function lua(hljs) {
       const OPENING_LONG_BRACKET = "\\[=*\\[";
       const CLOSING_LONG_BRACKET = "\\]=*\\]";
@@ -6257,9 +6257,9 @@ var require_lua = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/makefile.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/makefile.js
 var require_makefile = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/makefile.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/makefile.js"(exports, module) {
     function makefile(hljs) {
       const VARIABLE = {
         className: "variable",
@@ -6333,9 +6333,9 @@ var require_makefile = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/perl.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/perl.js
 var require_perl = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/perl.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/perl.js"(exports, module) {
     function perl(hljs) {
       const regex = hljs.regex;
       const KEYWORDS = [
@@ -6823,9 +6823,9 @@ var require_perl = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/objectivec.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/objectivec.js
 var require_objectivec = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/objectivec.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/objectivec.js"(exports, module) {
     function objectivec(hljs) {
       const API_CLASS = {
         className: "built_in",
@@ -7071,9 +7071,9 @@ var require_objectivec = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/php.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/php.js
 var require_php = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/php.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/php.js"(exports, module) {
     function php(hljs) {
       const regex = hljs.regex;
       const NOT_PERL_ETC = /(?![A-Za-z0-9])(?![$])/;
@@ -7677,9 +7677,9 @@ var require_php = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/php-template.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/php-template.js
 var require_php_template = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/php-template.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/php-template.js"(exports, module) {
     function phpTemplate(hljs) {
       return {
         name: "PHP template",
@@ -7728,9 +7728,9 @@ var require_php_template = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/plaintext.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/plaintext.js
 var require_plaintext = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/plaintext.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/plaintext.js"(exports, module) {
     function plaintext(hljs) {
       return {
         name: "Plain text",
@@ -7745,9 +7745,9 @@ var require_plaintext = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/python.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/python.js
 var require_python = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/python.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/python.js"(exports, module) {
     function python(hljs) {
       const regex = hljs.regex;
       const IDENT_RE = new RegExp("[\\p{XID_Start}_]\\p{XID_Continue}*", "u");
@@ -8165,9 +8165,9 @@ var require_python = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/python-repl.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/python-repl.js
 var require_python_repl = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/python-repl.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/python-repl.js"(exports, module) {
     function pythonRepl(hljs) {
       return {
         aliases: ["pycon"],
@@ -8195,9 +8195,9 @@ var require_python_repl = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/r.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/r.js
 var require_r = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/r.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/r.js"(exports, module) {
     function r(hljs) {
       const regex = hljs.regex;
       const IDENT_RE = /(?:(?:[a-zA-Z]|\.[._a-zA-Z])[._a-zA-Z0-9]*)|\.(?!\d)/;
@@ -8410,9 +8410,9 @@ var require_r = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/rust.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/rust.js
 var require_rust = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/rust.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/rust.js"(exports, module) {
     function rust(hljs) {
       const regex = hljs.regex;
       const RAW_IDENTIFIER = /(r#)?/;
@@ -8728,9 +8728,9 @@ var require_rust = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/scss.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/scss.js
 var require_scss = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/scss.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/scss.js"(exports, module) {
     var MODES = (hljs) => {
       return {
         IMPORTANT: {
@@ -9655,9 +9655,9 @@ var require_scss = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/shell.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/shell.js
 var require_shell = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/shell.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/shell.js"(exports, module) {
     function shell(hljs) {
       return {
         name: "Shell Session",
@@ -9684,9 +9684,9 @@ var require_shell = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/sql.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/sql.js
 var require_sql = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/sql.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/sql.js"(exports, module) {
     function sql(hljs) {
       const regex = hljs.regex;
       const COMMENT_MODE = hljs.COMMENT("--", "$");
@@ -10332,9 +10332,9 @@ var require_sql = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/swift.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/swift.js
 var require_swift = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/swift.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/swift.js"(exports, module) {
     function source(re) {
       if (!re) return null;
       if (typeof re === "string") return re;
@@ -11212,9 +11212,9 @@ var require_swift = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/yaml.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/yaml.js
 var require_yaml = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/yaml.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/yaml.js"(exports, module) {
     function yaml(hljs) {
       const LITERALS = "true false yes no null";
       const URI_CHARACTERS = "[\\w#;/?:@&=+$,.~*'()[\\]]+";
@@ -11418,9 +11418,9 @@ var require_yaml = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/typescript.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/typescript.js
 var require_typescript = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/typescript.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/typescript.js"(exports, module) {
     var IDENT_RE = "[A-Za-z$_][0-9A-Za-z$_]*";
     var KEYWORDS = [
       "as",
@@ -12237,9 +12237,9 @@ var require_typescript = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/vbnet.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/vbnet.js
 var require_vbnet = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/vbnet.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/vbnet.js"(exports, module) {
     function vbnet(hljs) {
       const regex = hljs.regex;
       const CHARACTER = {
@@ -12375,9 +12375,9 @@ var require_vbnet = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/languages/wasm.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/wasm.js
 var require_wasm = __commonJS({
-  "docs/node_modules/highlight.js/lib/languages/wasm.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/languages/wasm.js"(exports, module) {
     function wasm(hljs) {
       hljs.regex;
       const BLOCK_COMMENT = hljs.COMMENT(/\(;/, /;\)/);
@@ -12501,9 +12501,9 @@ var require_wasm = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/lib/common.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/common.js
 var require_common = __commonJS({
-  "docs/node_modules/highlight.js/lib/common.js"(exports, module) {
+  "../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/lib/common.js"(exports, module) {
     var hljs = require_core();
     hljs.registerLanguage("xml", require_xml());
     hljs.registerLanguage("bash", require_bash());
@@ -12547,7 +12547,7 @@ var require_common = __commonJS({
   }
 });
 
-// docs/node_modules/highlight.js/es/common.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/common.js
 var import_common = __toESM(require_common());
 var common_default = import_common.default;
 var export_HighlightJS = import_common.default;

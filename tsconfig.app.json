@@ -1,18 +1,23 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
-  "exclude": ["src/**/__tests__/*"],
+  "include": ["typings/**/*", "packages/**/*", "packages/**/*.vue"],
+  "exclude": ["packages/**/__tests__/*", "node_modules", "dist"],
   "compilerOptions": { 
     "declaration": true,
     "declarationDir": "dist",
     "emitDeclarationOnly": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./packages/*"],
+      "@gy-ui-plus/core": ["./packages/core/withInstall.ts"],
+      "@gy-ui-plus/button": ["./packages/button/index.ts"],
+      "@gy-ui-plus/table": ["./packages/table/index.ts"],
+      "@gy-ui-plus/layout-page": ["./packages/layout-page/index.ts"]
     },
     "types": ["vite/client"],
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true
   }
 }

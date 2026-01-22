@@ -4,19 +4,19 @@ import {
   h,
   ref,
   watch
-} from "./chunk-3MDVO2OS.js";
+} from "./chunk-W5AQ4OLI.js";
 import {
   require_core
-} from "./chunk-QHCNDENE.js";
+} from "./chunk-LFZJEN3U.js";
 import {
   __toESM
 } from "./chunk-G3PMV62Z.js";
 
-// docs/node_modules/highlight.js/es/core.js
+// ../node_modules/.pnpm/highlight.js@11.11.1/node_modules/highlight.js/es/core.js
 var import_core = __toESM(require_core());
 var core_default = import_core.default;
 
-// docs/node_modules/@highlightjs/vue-plugin/dist/highlightjs-vue.esm.min.js
+// ../node_modules/.pnpm/@highlightjs+vue-plugin@2.1_09b7e5d2c19325dc414e3a91415b2e91/node_modules/@highlightjs/vue-plugin/dist/highlightjs-vue.esm.min.js
 var r = defineComponent({ props: { code: { type: String, required: true }, language: { type: String, default: "" }, autodetect: { type: Boolean, default: true }, ignoreIllegals: { type: Boolean, default: true } }, setup: function(e) {
   var n = ref(e.language);
   watch(function() {

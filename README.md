@@ -13,12 +13,42 @@
 
 ## 安装
 
-使用 npm 或 yarn 安装：
+使用 npm、yarn 或 pnpm 安装：
 
 ```bash
 npm install gy-ui-plus
 # 或
 yarn add gy-ui-plus
+# 或
+pnpm add gy-ui-plus
+```
+
+## 开发
+
+本项目使用 monorepo 架构，基于 pnpm workspace 管理。详细说明请参考 [MONOREPO.md](./MONOREPO.md)。
+
+### 开发环境要求
+
+- Node.js: ^20.19.0 || >=22.12.0
+- pnpm: >=8.0.0
+
+### 本地开发
+
+```bash
+# 安装依赖
+pnpm install
+
+# 开发文档站点
+pnpm docs:dev
+
+# 构建组件库
+pnpm build
+
+# 类型检查
+pnpm type-check
+
+# 代码检查
+pnpm lint
 ```
 
 ## 快速开始

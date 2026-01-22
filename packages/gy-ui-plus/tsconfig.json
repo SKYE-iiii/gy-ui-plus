@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.app.json",
+  "compilerOptions": {
+    "composite": false,
+    "rootDir": "../..",
+    "baseUrl": "../..",
+    "paths": {
+      "@gy-ui-plus/core": ["./packages/core/withInstall.ts"],
+      "@gy-ui-plus/button": ["./packages/button/index.ts"],
+      "@gy-ui-plus/table": ["./packages/table/index.ts"],
+      "@gy-ui-plus/layout-page": ["./packages/layout-page/index.ts"]
+    }
+  },
+  "include": ["../../packages/**/*.ts", "../../packages/**/*.vue"],
+  "exclude": ["../../node_modules", "../../dist"]
+}

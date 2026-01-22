@@ -1,7 +1,7 @@
 {
   "name": "@gy-ui-plus/docs",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "description": "gy-ui-plus docs",
   "main": "index.js",
   "type": "module",
@@ -46,7 +46,7 @@
     "highlight.js": "^11.9.0",
     "js-cookie": "^3.0.5",
     "echarts": "^5.4.3",
-    "gy-ui-plus": "npm:gy-ui-plus@latest",
-    "vue": "3.4.21"
+    "gy-ui-plus": "workspace:*",
+    "vue": "^3.5.27"
   }
 }

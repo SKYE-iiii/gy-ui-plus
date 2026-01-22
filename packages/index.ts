@@ -2,9 +2,9 @@ import type { Component, App } from 'vue'
 // import ElementPlus from 'element-plus'
 // import 'element-plus/dist/index.css'
 // import locale from 'element-plus/lib/locale/lang/zh-cn' // 因element-plus默认是英文，我们指定一下默认中文
-import GyButton from './button/src/index.vue'
-import GyTable from './table/src/index.vue'
-import GyLayoutPage from './layout-page/src/index.vue'
+import GyButton from '@gy-ui-plus/button'
+import { GyTable } from '@gy-ui-plus/table'
+import { GyLayoutPage } from '@gy-ui-plus/layout-page'
 
 // 存储组件列表
 const components: {

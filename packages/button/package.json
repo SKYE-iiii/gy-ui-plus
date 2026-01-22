@@ -1,0 +1,19 @@
+{
+  "name": "@gy-ui-plus/button",
+  "version": "1.0.9",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "types": "./index.ts"
+    }
+  },
+  "dependencies": {
+    "@gy-ui-plus/core": "workspace:*",
+    "vue": "^3.5.27"
+  }
+}

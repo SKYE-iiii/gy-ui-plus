@@ -12,7 +12,7 @@ import 'highlight.js/lib/common'
 import hljsVuePlugin from '@highlightjs/vue-plugin/dist/highlightjs-vue.esm.min.js' // 引入echarts
 
 // 基于element-plus二次封装基础组件
-import GyUiPlus from '../../../packages/index' // 引入t-ui-plus
+import GyUiPlus from 'gy-ui-plus' // 引入gy-ui-plus
 
 import TVHtml from '../components/TVHtml.vue'
 import TIcon from '../components/TIcon.vue'

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { mdPlugin } from './plugins/mdPlugin'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { resolve } from 'path'
 
 export default defineConfig({
   title: 'GY-UI-Plus',
@@ -32,7 +33,12 @@ export default defineConfig({
     plugins: [vueJsx() as any],
     resolve: {
       alias: {
-        '@': '/packages',
+        '@': resolve(__dirname, '../../packages'),
+        '@gy-ui-plus/core': resolve(__dirname, '../../packages/core/withInstall.ts'),
+        '@gy-ui-plus/button': resolve(__dirname, '../../packages/button/index.ts'),
+        '@gy-ui-plus/table': resolve(__dirname, '../../packages/table/index.ts'),
+        '@gy-ui-plus/layout-page': resolve(__dirname, '../../packages/layout-page/index.ts'),
+        'gy-ui-plus': resolve(__dirname, '../../packages/index.ts'),
       },
     },
   },
