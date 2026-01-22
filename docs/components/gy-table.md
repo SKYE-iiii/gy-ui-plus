@@ -390,28 +390,19 @@ GyTable/expand
 
 ### GyTable 参数配置
 
----
-
-### 1、代码示例
-
-```html
-<t-table
-  :table="table"
-  :columns="table.columns"
-  @size-change="handlesSizeChange"
-  @page-change="handlesCurrentChange"
-/>
-```
-
-### 2、配置参数（Table Attributes）
+### 1、配置参数（Table Attributes）
 
 | 参数                                                              | 说明                                                                      | 类型             | 默认值                                     |
-| :---------------------------------------------------------------- | :------------------------------------------------------------------------ | :--------------- | :----------------------------------------- |
+| :---------------------------------------------------------------- | :------------------------------------------------------------------------ | :--------------- | :----------------------------------------- | --- | ---------------------- | ------ | --- |
+| tableData                                                         | 展示数据                                                                  | Array            | []                                         |
+| paginationData                                                    | 分页数据                                                                  | Object           | {}                                         |
+| ---total                                                          | 数据总条数                                                                | Number           | -                                          |
+| ---pageSize                                                       | 页数量                                                                    | Number           | -                                          |
+| ---currentPage                                                    | 当前页数                                                                  | Number           | -                                          |     |
 | table                                                             | 表格数据对象                                                              | Object           | {}                                         |
 | ---layout                                                         | 分页组件布局(参考el-pagination Api)                                       | String           | `'total,sizes, prev, pager, next, jumper'` |
 | ---rules                                                          | 规则（可依据 elementPlus el-form 配置————对应 columns 的 prop 值）        | Object           | -                                          |
 | ---border                                                         | 是否开启边框线                                                            | Boolean          | false                                      |
-| ---data                                                           | 展示数据                                                                  | Array            | []                                         |
 | ---toolbar                                                        | 表格外操作栏选中表格某行，可以将其数据传出                                | Array            | []                                         |
 | ---operator                                                       | 表格内操作栏数据                                                          | Array            | []                                         |
 | -------hasPermi                                                   | 表格内操作栏按钮权限资源（必须传`btnPermissions`属性才生效）              | String           | -                                          |
@@ -432,10 +423,7 @@ GyTable/expand
 | --------bind                                                      | el-table-column Attributes                                                | Object           | -                                          |
 | --------style <el-tag>v1.5.2</el-tag>                             | 操作按钮整行样式                                                          | Object           | -                                          |
 | --------dropdownBind <el-tag>v1.5.2</el-tag>                      | 更多按钮配置项                                                            | Object           | -                                          |
-| ---firstColumn                                                    | 表格首列(序号 index,复选框 selection,单选 radio,展开行 expand）排列       | object/Array     | -                                          |
-| ---total                                                          | 数据总条数                                                                | Number           | -                                          |
-| ---pageSize                                                       | 页数量                                                                    | Number           | -                                          |
-| ---currentPage                                                    | 是否需要显示切换页条数                                                    | Number           | -                                          |
+| ---firstColumn                                                    | 表格首列(序号 index,复选框 selection,单选 radio,展开行 expand）排列       | object/Array     | -                                          |     | 是否需要显示切换页条数 | Number | -   |
 | columns                                                           | 表头信息                                                                  | Array            | []                                         |
 | ----sort                                                          | 排序 （设置：sort:true）                                                  | Boolean          | false                                      |
 | ----sortable                                                      | 排序，若设置为 'custom'，需要监听 Table 的 sort-change 事件               | Boolean /string  | false                                      |
@@ -539,9 +527,9 @@ GyTable/expand
 
 | 插槽名     | 说明                                                | 参数  |
 | :--------- | :-------------------------------------------------- | :---- |
-| title      | GyTable 左侧 Title                                   | -     |
-| titleTip   | GyTable 头部 tip                                     | -     |
-| toolbar    | GyTable 右侧 toolbar                                 | -     |
+| title      | GyTable 左侧 Title                                  | -     |
+| titleTip   | GyTable 头部 tip                                    | -     |
+| toolbar    | GyTable 右侧 toolbar                                | -     |
 | expand     | table.firstColumn.type：`expand` 展开行插槽         | scope |
 | -          | el-table-column 某列自定义插槽（slotName 命名）     | scope |
 | -          | el-table-column 单元格编辑插槽（editSlotName 命名） | scope |
