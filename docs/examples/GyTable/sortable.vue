@@ -3,6 +3,7 @@
     <gy-table
       title="自定义排序--指定姓名是'张三3'的行不需要排序"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       sortable="custom"

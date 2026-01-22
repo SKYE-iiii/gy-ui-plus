@@ -4,6 +4,7 @@
       title="操作列-显示更多"
       ref="selectionTable"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     >

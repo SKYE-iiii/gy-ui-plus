@@ -1,6 +1,12 @@
 <template>
   <gy-layout-page>
-    <gy-table title="表头合并" :table="table" :columns="table.columns" :isShowPagination="false" />
+    <gy-table
+      title="表头合并"
+      :table="table"
+      :tableData="table.data"
+      :columns="table.columns"
+      :isShowPagination="false"
+    />
   </gy-layout-page>
 </template>
 

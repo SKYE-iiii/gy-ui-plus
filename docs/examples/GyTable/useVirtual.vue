@@ -9,6 +9,7 @@
     <gy-table
       tableTile="虚拟滚动"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       useVirtual

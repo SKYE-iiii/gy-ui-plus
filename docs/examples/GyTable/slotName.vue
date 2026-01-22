@@ -3,6 +3,7 @@
     <gy-table
       title="某列插槽渲染"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     >

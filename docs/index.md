@@ -31,15 +31,6 @@ app.use(GyUiPlus)
 app.mount('#app')
 ```
 
-## 组件
-
-<ClientOnly>
-  <div class="demo-button">
-    <gy-button>默认按钮</gy-button>
-    <gy-button type="primary">主要按钮</gy-button>
-  </div>
-</ClientOnly>
-
 <style scoped>
 .demo-button {
   display: flex;

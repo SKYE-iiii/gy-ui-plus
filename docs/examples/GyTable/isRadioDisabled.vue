@@ -4,6 +4,7 @@
       title="单选框"
       ref="selectionTable"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       @radioChange="radioChange"
       :isShowPagination="false"

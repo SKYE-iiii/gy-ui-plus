@@ -69,7 +69,7 @@
   </el-table-column>
 </template>
 
-<script setup lang="tsx">
+<script setup lang="ts">
 import SingleEditCell from './singleEditCell.vue'
 import RenderCol from './renderCol.vue'
 import RenderHeader from './renderHeader.vue'

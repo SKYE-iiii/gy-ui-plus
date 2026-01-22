@@ -3,6 +3,7 @@
     <gy-table
       table-title="empty-text属性使用"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       empty-text="empty-text属性设置：当前没有数据，请稍后再试。"

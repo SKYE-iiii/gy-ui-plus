@@ -131,7 +131,7 @@
             ></el-radio>
             <template v-if="table.firstColumn.type === 'index'">
               <span v-if="isPaginationCumulative && isShowPagination">{{
-                (table.currentPage - 1) * table.pageSize + scope.$index + 1
+                (paginationData.currentPage - 1) * paginationData.pageSize + scope.$index + 1
               }}</span>
               <span v-else>{{ scope.$index + 1 }}</span>
             </template>
@@ -259,6 +259,7 @@
                     t_edit_cell_form_rules: isEditRules,
                   }"
                   :ref="(el: any) => handleRef(el, scope, item)"
+                  :disabled="isDisabledForm"
                   @submit.prevent
                 >
                   <single-edit-cell
@@ -346,14 +347,15 @@
     <!-- 分页器 -->
     <el-pagination
       v-if="state.tableData && state.tableData.length && isShowPagination"
-      v-model:current-page="table.currentPage"
+      v-model:current-page="paginationData.pageNo"
       @current-change="handlesCurrentChange"
+      @change="handlePageChange"
       :page-sizes="table.pageSizes || [10, 20, 50, 100]"
-      v-model:page-size="table.pageSize"
+      v-model:page-size="paginationData.pageSize"
       :layout="table.layout || 'total,sizes, prev, pager, next, jumper'"
       :prev-text="table.prevText"
       :next-text="table.nextText"
-      :total="table.total || 0"
+      :total="paginationData.total || 0"
       :size="table.size || 'small'"
       v-bind="$attrs"
       background
@@ -387,6 +389,7 @@ import {
 } from 'vue'
 import { Rank, Edit } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
+// @ts-ignore
 import Sortable from 'sortablejs'
 import GyTableColumn from './GyTableColumn.vue'
 import SingleEditCell from './singleEditCell.vue'
@@ -429,7 +432,7 @@ defineOptions({
 })
 // 初始化数据
 let state = reactive({
-  tableData: props.table.data,
+  tableData: props.tableData,
   columnSet: [],
   copyTableData: [], // 键盘事件
 })
@@ -450,7 +453,7 @@ const GyTableBox = ref<HTMLElement | any>(null)
 // 获取columnSet Ref
 const columnSetRef = ref<HTMLElement | any>(null)
 // 获取form ref
-const formRef = ref({})
+const formRef = ref({}) as any
 // 动态form ref
 const handleRef = (
   el: any,
@@ -481,6 +484,8 @@ const emits = defineEmits([
   'radioChange',
   'rowSort',
   'validateError',
+  'update:paginationData',
+  'page-size-change',
 ])
 // 获取所有插槽
 const slots = useSlots()
@@ -578,7 +583,12 @@ const initSort = () => {
     },
   })
 }
-
+/** current-page 或 page-size 更改 */
+const handlePageChange = (pageNo: number, pageSize: number) => {
+  const tableConfig = { ...props.table, pageNo, pageSize }
+  emits('update:paginationData', tableConfig)
+  emits('page-size-change', { pageNo, pageSize })
+}
 // 过滤字典
 /**
  * 下拉数据回显中文过滤器

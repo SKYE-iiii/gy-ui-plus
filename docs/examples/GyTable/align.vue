@@ -13,6 +13,7 @@
     <gy-table
       title="对齐方式"
       :table="table"
+      :tableData="table.data"
       :align="align"
       :columns="table.columns"
       :isShowPagination="false"

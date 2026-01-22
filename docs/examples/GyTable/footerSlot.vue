@@ -11,6 +11,7 @@
     <gy-table
       title="单元格编辑--footer插槽"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       ref="singleEdit"
@@ -42,7 +43,7 @@
 
 <script setup lang="tsx">
 import { ElMessage } from 'element-plus'
-import { reactive, ref ,h} from 'vue'
+import { reactive, ref, h } from 'vue'
 const footerBtnAlign = ref('right')
 // const singleEdit: any = (ref < HTMLElement) | (null > null)
 const singleEdit: any = ref(null)
@@ -157,14 +158,13 @@ let table = reactive<TableTypes.Table>({
       label: '编辑组件插槽',
       minWidth: '180',
       renderHeader: (row) => {
-        return h(
-          'div',
-          null,
-          [
-            h('span', null, row.label),
-            h('i', { class: 'el-icon-question', style: { color: '#409eff', marginLeft: '5px', fontSize: '15px' } }),
-          ]
-        )
+        return h('div', null, [
+          h('span', null, row.label),
+          h('i', {
+            class: 'el-icon-question',
+            style: { color: '#409eff', marginLeft: '5px', fontSize: '15px' },
+          }),
+        ])
       },
       canEdit: true,
       configEdit: {

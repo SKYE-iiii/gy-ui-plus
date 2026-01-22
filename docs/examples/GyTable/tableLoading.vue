@@ -3,7 +3,9 @@
     <gy-table
       title="table loading效果"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
+      :paginationData="paginationData"
       @selection-change="selectionChange"
       :tableLoading="tableLoading"
       :row-key="getRowKey"
@@ -31,11 +33,9 @@ import { ElMessageBox, ElSwitch } from 'element-plus'
 import data from './data.json'
 import data1 from './data2.json'
 const tableLoading = ref<boolean>(false)
+const paginationData = ref({ total: 0, currentPage: 1, pageSize: 10 })
 const table = ref<TableTypes.Table>({
   firstColumn: { type: 'selection', isPaging: true },
-  total: 0,
-  currentPage: 1,
-  pageSize: 10,
   // 接口返回数据
   data: [],
   // 表头数据
@@ -94,7 +94,7 @@ const getData = async (pageNum) => {
   // console.log('获取列表数据', res)
   if (res.success) {
     table.value.data = res.data.records
-    table.value.total = res.data.total
+    paginationData.value.total = res.data.total
     setTimeout(() => {
       tableLoading.value = false
     }, 2000)
@@ -125,7 +125,7 @@ const handleStatusChange = (row) => {
 // 选择当前页码
 const pageChange = (val) => {
   console.log('选择当前页码', val)
-  table.value.currentPage = val
+  paginationData.value.currentPage = val
   getData(val)
 }
 </script>

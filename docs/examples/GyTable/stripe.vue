@@ -3,6 +3,7 @@
     <gy-table
       title="斑马线表格"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       stripe

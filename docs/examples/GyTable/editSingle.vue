@@ -4,6 +4,7 @@
       isShowFooterBtn
       tableTitle="单击开启编辑模式"
       :table="table"
+      :tableData="table.data"
       :isShowPagination="false"
       :columns="table.columns"
       :listTypeInfo="listTypeInfo"

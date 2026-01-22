@@ -7,6 +7,7 @@
       isTree
       align="left"
       :table="table"
+      :tableData="table.data"
       :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
       :columns="table.columns"
       :isShowPagination="false"

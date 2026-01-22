@@ -1,6 +1,12 @@
 <template>
   <gy-layout-page>
-    <gy-table title="展开行" :table="table" :columns="table.columns" :isShowPagination="false">
+    <gy-table
+      title="展开行"
+      :table="table"
+      :tableData="table.data"
+      :columns="table.columns"
+      :isShowPagination="false"
+    >
       <template #expand="{ scope }">
         <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
           <el-tab-pane label="姓名" name="name">
@@ -13,7 +19,7 @@
               @change="selectChange"
               width="200px"
           /> -->
-        </el-tab-pane>
+          </el-tab-pane>
           <el-tab-pane label="日期" name="date">
             <div>日期：{{ scope.row.date }}</div>
           </el-tab-pane>

@@ -4,6 +4,7 @@
       title="多级表头单元格编辑"
       ref="multileHeadSingleEdit"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       :listTypeInfo="table.listTypeInfo"

@@ -4,6 +4,7 @@
       title="表尾合计行"
       sum-text="当页合计"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       show-summary

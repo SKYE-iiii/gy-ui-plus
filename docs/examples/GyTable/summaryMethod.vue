@@ -3,6 +3,7 @@
     <gy-table
       title="自定义表尾合计"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       show-summary

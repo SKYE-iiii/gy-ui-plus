@@ -3,6 +3,7 @@
     <gy-table
       title="多级表头动态显示隐藏列"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     >

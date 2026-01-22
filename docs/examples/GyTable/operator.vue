@@ -4,6 +4,7 @@
       title="操作列"
       ref="selectionTable"
       :table="table"
+      :tableData="table.data"
       :btnPermissions="['operator-view-detail', 'operator-edit']"
       :columns="table.columns"
       @selection-change="selectionChange"

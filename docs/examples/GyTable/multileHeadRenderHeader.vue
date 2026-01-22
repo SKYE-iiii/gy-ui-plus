@@ -3,6 +3,7 @@
     <gy-table
       title="多级表头--自定义表头"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     />
@@ -11,7 +12,7 @@
 
 <script setup lang="tsx">
 import { ref, h } from 'vue'
-import { ElCheckbox } from "element-plus"
+import { ElCheckbox } from 'element-plus'
 let table = ref<TableTypes.Table>({
   // 接口返回数据
   data: [

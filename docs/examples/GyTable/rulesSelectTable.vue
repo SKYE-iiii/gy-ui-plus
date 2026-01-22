@@ -3,6 +3,7 @@
     <gy-table
       title="单元格编辑TSelectTable--rules"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       ref="singleEditTSelectTable"

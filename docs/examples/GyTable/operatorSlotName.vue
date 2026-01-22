@@ -4,6 +4,7 @@
       title="操作按钮插槽方式"
       ref="selectionTable"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       @selection-change="selectionChange"
       :isShowPagination="false"

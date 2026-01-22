@@ -4,6 +4,7 @@
       title="自定义操作按钮样式"
       ref="selectionTable"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       @selection-change="selectionChange"
       :isShowPagination="false"

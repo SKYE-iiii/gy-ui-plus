@@ -3,6 +3,7 @@
     <gy-table
       tableTitle="formatter使用"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     />

@@ -3,6 +3,7 @@
     <gy-table
       title="表头合并--插槽使用"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     >

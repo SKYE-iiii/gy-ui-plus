@@ -3,6 +3,7 @@
     <gy-table
       title="加边框--优先去标签值"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       border
       :isShowPagination="false"

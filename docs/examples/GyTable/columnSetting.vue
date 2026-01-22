@@ -3,6 +3,7 @@
     <gy-table
       title="动态显示隐藏列且可以拖动排序"
       :table="table"
+      :tableData="table.data"
       name="Vuepress2Docs"
       columnSetting
       ref="tableColumnSetRef"

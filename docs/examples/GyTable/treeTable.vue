@@ -5,6 +5,7 @@
       isCopy
       isTree
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       row-key="deptId"
       :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"

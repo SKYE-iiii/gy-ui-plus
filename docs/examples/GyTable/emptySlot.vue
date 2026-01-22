@@ -3,6 +3,7 @@
     <gy-table
       table-title="empty插槽使用"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       size="small"

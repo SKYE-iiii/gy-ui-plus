@@ -1,6 +1,11 @@
 <template>
   <gy-layout-page>
-    <gy-table :table="table" :columns="table.columns" :listTypeInfo="table.listTypeInfo">
+    <gy-table
+      :table="table"
+      :tableData="table.data"
+      :columns="table.columns"
+      :listTypeInfo="table.listTypeInfo"
+    >
     </gy-table>
   </gy-layout-page>
 </template>

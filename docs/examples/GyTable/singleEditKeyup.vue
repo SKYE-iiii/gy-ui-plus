@@ -3,6 +3,7 @@
     <gy-table
       title="单元格编辑--键盘事件功能"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       :listTypeInfo="table.listTypeInfo"

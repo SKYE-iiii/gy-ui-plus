@@ -3,6 +3,7 @@
     <gy-table
       title="远程排序"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       @sort-change="sortChange"

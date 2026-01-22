@@ -3,6 +3,7 @@
     <gy-table
       title="字典过滤渲染"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     />
@@ -10,7 +11,7 @@
 </template>
 
 <script setup lang="tsx">
-import { ref,h } from 'vue'
+import { ref, h } from 'vue'
 let table = ref<TableTypes.Table>({
   // 接口返回数据
   data: [

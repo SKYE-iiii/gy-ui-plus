@@ -3,6 +3,7 @@
     <gy-table
       title="基本用法"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       size="small"

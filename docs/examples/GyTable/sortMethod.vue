@@ -3,6 +3,7 @@
     <gy-table
       title="指定数据按照哪个属性进行排序"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     />

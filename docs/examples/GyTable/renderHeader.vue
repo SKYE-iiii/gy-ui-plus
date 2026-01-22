@@ -3,6 +3,7 @@
     <gy-table
       title="自定义表头渲染"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     >

@@ -9,6 +9,7 @@
     <gy-table
       title="表格大小"
       :table="table"
+      :tableData="table.data"
       :size="size"
       :columns="table.columns"
       :isShowPagination="false"

@@ -3,6 +3,7 @@
     <gy-table
       tableTitle="行--拖拽排序第一列显示拖拽图标"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       :isRowSort="isRowSort"

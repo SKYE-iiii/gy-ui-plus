@@ -4,6 +4,7 @@
       title="表格--筛选功能"
       ref="selectionTable"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
     />

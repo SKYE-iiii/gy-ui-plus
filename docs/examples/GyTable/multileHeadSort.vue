@@ -3,6 +3,7 @@
     <gy-table
       table-title="多级表头排序"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       sortable="custom"

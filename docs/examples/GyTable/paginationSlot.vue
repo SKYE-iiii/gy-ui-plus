@@ -3,7 +3,9 @@
     <gy-table
       title="集成分页器--序列号显示-累加"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
+      :paginationData="paginationData"
       @page-change="pageChange"
       isPaginationCumulative
     >
@@ -19,11 +21,9 @@ import { onMounted, ref, h } from 'vue'
 import { ElMessageBox, ElSwitch } from 'element-plus'
 import data from './data.json'
 import data1 from './data2.json'
+const paginationData = ref({ total: 0, currentPage: 1, pageSize: 10 })
 const table = ref<TableTypes.Table>({
   firstColumn: { type: 'index', width: 80, fixed: true },
-  total: 0,
-  currentPage: 1,
-  pageSize: 10,
   layout: 'total,sizes, slot, prev, pager, next, jumper',
   prevText: '上一页',
   nextText: '下一页',
@@ -78,7 +78,7 @@ const getData = async (pageNum) => {
   // console.log('获取列表数据', res)
   if (res.success) {
     table.value.data = res.data.records
-    table.value.total = res.data.total
+    paginationData.value.total = res.data.total
   }
 }
 const handleStatusChange = (row) => {
@@ -98,7 +98,7 @@ const handleStatusChange = (row) => {
 // 选择当前页码
 const pageChange = (val) => {
   console.log('选择当前页码', val)
-  table.value.currentPage = val
+  paginationData.value.currentPage = val
   getData(val)
 }
 </script>

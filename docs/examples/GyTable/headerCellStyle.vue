@@ -3,6 +3,7 @@
     <gy-table
       title="表头样式修改"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       :header-cell-style="headerCellStyle"

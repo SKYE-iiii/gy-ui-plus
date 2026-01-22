@@ -4,6 +4,7 @@
       title="单元格编辑功能"
       ref="singleEdit"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       :isShowPagination="false"
       :listTypeInfo="table.listTypeInfo"

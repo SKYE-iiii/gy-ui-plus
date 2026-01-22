@@ -4,6 +4,7 @@
       title="第一列显示复选框和序列号"
       ref="selectionTable"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       @selection-change="selectionChange"
       :isShowPagination="false"

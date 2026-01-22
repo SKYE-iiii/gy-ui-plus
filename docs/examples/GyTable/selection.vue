@@ -4,6 +4,7 @@
       title="复选框"
       ref="selectionTable"
       :table="table"
+      :tableData="table.data"
       :columns="table.columns"
       @selection-change="selectionChange"
       :isShowPagination="false"

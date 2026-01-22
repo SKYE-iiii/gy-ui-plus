@@ -3,6 +3,7 @@
     <gy-table
       title="双击单元格复制"
       :table="table"
+      :tableData="table.data"
       isCopy
       :columns="table.columns"
       :isShowPagination="false"
