@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueJsx from "@vitejs/plugin-vue-jsx"
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 
@@ -11,11 +11,19 @@ export default defineConfig({
     vueJsx(),
     dts({
       entryRoot: resolve(__dirname, '../..'),
-      include: [resolve(__dirname, '../../packages/**/*.ts'), resolve(__dirname, '../../packages/**/*.vue')],
-      exclude: [resolve(__dirname, '../../packages/**/__tests__/**'), resolve(__dirname, '../../node_modules/**')],
+      include: [
+        resolve(__dirname, '../../packages/**/*.ts'),
+        resolve(__dirname, '../../packages/**/*.vue'),
+      ],
+      exclude: [
+        resolve(__dirname, '../../packages/**/__tests__/**'),
+        resolve(__dirname, '../../node_modules/**'),
+        resolve(__dirname, '../../dist/**'),
+      ],
       outDir: resolve(__dirname, '../../dist'),
       copyDtsFiles: true,
       rollupTypes: false,
+      insertTypesEntry: true,
     }),
   ],
   resolve: {
@@ -36,11 +44,23 @@ export default defineConfig({
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
-      external: ['vue'],
+      external: [
+        'vue',
+        'element-plus',
+        '@element-plus/icons-vue',
+        'sortablejs',
+        'axios',
+        'vue-router',
+      ],
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {
           vue: 'Vue',
+          'element-plus': 'ElementPlus',
+          '@element-plus/icons-vue': 'ElementPlusIconsVue',
+          sortablejs: 'Sortable',
+          axios: 'axios',
+          'vue-router': 'VueRouter',
         },
         exports: 'named',
       },

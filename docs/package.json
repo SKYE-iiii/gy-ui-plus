@@ -1,7 +1,7 @@
 {
   "name": "@gy-ui-plus/docs",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "description": "gy-ui-plus docs",
   "main": "index.js",
   "type": "module",

@@ -6,7 +6,7 @@
   "author": "zyj",
   "license": "MIT",
   "version": "1.0.18",
-  "private": true,
+  "private": false,
   "type": "module",
   "engines": {
     "node": "^20.19.0 || >=22.12.0",

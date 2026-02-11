@@ -1,7 +1,7 @@
 {
   "name": "@gy-ui-plus/button",
   "version": "1.0.9",
-  "private": true,
+  "private": false,
   "type": "module",
   "main": "./index.ts",
   "module": "./index.ts",
