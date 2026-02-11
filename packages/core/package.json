@@ -1,6 +1,6 @@
 {
   "name": "@gy-ui-plus/core",
-  "version": "1.0.9",
+  "version": "1.0.20",
   "private": false,
   "type": "module",
   "main": "./withInstall.ts",

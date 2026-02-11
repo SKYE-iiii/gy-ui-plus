@@ -1,6 +1,6 @@
 {
   "name": "@gy-ui-plus/layout-page",
-  "version": "1.0.9",
+  "version": "1.0.20",
   "private": false,
   "type": "module",
   "main": "./index.ts",
