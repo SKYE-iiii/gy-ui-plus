@@ -1,318 +1,76 @@
-# GyTable 基础表格
+# GyTable 可编辑表格
 
-用于展示多条结构类似的数据， 可对数据进行排序、筛选、对比或其他自定义操作。
-
-### 基础用法
+### 多级表头--单元格编辑
 
 :::demo
-GyTable/base
+GyTable/multileHeadEdit
 :::
 
-### 表头样式修改
-
-:::demo 参考`element-plus`配置`header-cell-style`属性即可
-GyTable/headerCellStyle
-:::
-
-### 斑马线表格
-
-:::demo 在`t-table`标签中添加`stripe`
-GyTable/stripe
-:::
-
-### 表格loading
-
-:::demo 在`t-table`标签中添加`tableLoading`，loading文字设置`loadingText`即可
-GyTable/tableLoading
-:::
-
-### 边框表格--`table`数据方式
-
-:::demo 在`table`对象中添加属性`border:true`
-GyTable/border
-:::
-
-### 边框表格--`GyTable`标签方式
-
-:::demo 在`GyTable`标签中添加`border`即可
-GyTable/borderCom
-:::
-
-### 表格大小
-
-:::demo 在`table`标签中添加`size:'small'`设置表格大小，可选值`large`、`default`、`small`
-GyTable/size
-:::
-
-### 对齐方式
-
-:::demo 在`GyTable`标签中添加`align:'center'`设置整个 table 对齐方式，在`columns`中设置`align`设置每列对齐方式（`columns优先级`高于`整体的对齐方式`）----`align`可选值`left`、`center`、`right`
-GyTable/align
-:::
-
-### 基本表尾合计
-
-:::demo 在`GyTable`标签中添加`show-summary`,默认情况下，对于合计行，第一列不进行数据求合操作，而是显示「合计」二字（可通过sum-text配置），其余列会将本列所有`数值`(不区分`Number`与`String`类型)进行求合操作，并显示出来。
-GyTable/showSummary
-:::
-
-### 自定义表尾合计
-
-:::demo 在`GyTable`标签中添加`show-summary`,自定义合计逻辑：使用 `summary-method` 并传入一个方法，返回一个数组，这个数组中的各项就会显示在合计行的各列中，可以是一个 VNode 或 String。
-GyTable/summaryMethod
-:::
-
-### 常规排序
-
-:::demo 在`columns`某一项中添加`sort`或`sortable`
-GyTable/sort
-:::
-
-### 指定数据排序
-
-:::demo 在`columns`某一项中添加`sort:true`或`sortable:true`,在`bind`中添加`sortMethod`来指定按照哪个属性数据排序
-GyTable/sortMethod
-:::
-
-### 特定项远程排序
-
-:::demo 在`columns`某一项中添加`sort:custom`或`sortable:custom`,则代表用户希望远程排序，需要监听 `Table` 的 `sort-change` 事件
-GyTable/sortCellChange
-:::
-
-### 自定义排序规则
-
-:::demo 在`GyTable`组件标签中添加`sortable:custom`,则表示需要自定义排序，需要监听 `Table` 的 `sort-change` 事件
-GyTable/sortable
-:::
-
-### formatter使用 <el-tag>v1.5.3</el-tag>
-
-:::demo 在`columns`某一项中添加`formatter`,formatter为`Function`，会传入4个参数：当前行`row` ，当前列 `column`，当前值`cellValue`，当前索引`index`， 可以根据自己的需求进行处理
-GyTable/formatter
-:::
-
-### 复选框表格
-
-:::demo 在`table`对象中添加`firstColumn:{ type: 'selection', fixed: true }`
-GyTable/selection
-:::
-
-### 复选框表格--翻页选中功能selectionDisabled
-
-:::demo 在`table`对象中添加`firstColumn:{ type: 'selection', isPaging: true , fixed: true }`
-GyTable/pageCheck
-:::
-
-### 复选框表格--禁用功能
-
-:::demo 在`table`对象中添加`firstColumn:{ type: 'selection', selectable: selectableFun }`;`selectableFun`的返回值用来决定这一行的 `CheckBox` 是否可以勾选。
-GyTable/selectionDisabled
-:::
-
-### 表格--筛选功能
-
-:::demo 在`columns`列中某一项的`bind`中设置`filters`和`filter-method`属性即可开启该列的筛选，`filters`是一个数组，`filter-method` 是一个方法，它用于决定某些数据是否显示， 会传入`三个参数`：`value`、 `row` 、`column`。
-GyTable/filterMethod
-:::
-
-### 单选框表格
-
-:::demo 在`table`对象中添加`firstColumn:{ type: 'radio', fixed: true }`,可以再次点击取消选中；添加`@radioChange`事件传当前选中行是数据；默认点击整行选中 可以设置`rowClickRadio：false`,只有点击单选框才选中
-GyTable/radio
-:::
-
-### 单选框--默认选中项及开启点击整行选中
-
-:::demo 在`table`对象中添加`firstColumn:{ type: 'radio', fixed: true }`,可以再次点击取消选中；添加`@radioChange`事件传当前选中行是数据；默认点击整行选中,defaultRadioCol: 表默认选中项
-GyTable/radioDefault
-:::
-
-### 单选框--禁用
-
-:::demo `table`的`data` 数据源满足某条件时，新增`isRadioDisabled`属性为`true`，禁用单选。
-GyTable/isRadioDisabled
-:::
-
-### 序列号表格
-
-:::demo 在`table`对象中添加`firstColumn:{ type: 'index', fixed: true }`；可以新增`label`属性来定义表头名默认'序号'
-GyTable/serialNum
-:::
-
-### 第一列显示复选框和序列号
+### 单元格编辑功能
 
 :::demo
-GyTable/selectionIndex
+GyTable/configEdit
 :::
 
-### 第一列显示单选框和序列号
+### 单元格单独编辑
 
 :::demo
-GyTable/radioIndex
+GyTable/configEditUse
 :::
 
-### Table empty插槽使用<el-tag>1.4.15</el-tag>
+### 单元格编辑--键盘事件
+
+:::demo `isKeyup` 单元格编辑是否开启键盘事件;向上、向下、回车横向的下一个输入框
+GyTable/singleEditKeyup
+:::
+
+### 单元格编辑--使用组件事件
+
+:::demo `eventHandle`继承第三方组件事件，根据第三方组件事件传参，若第三方组件事件`本身有参数`则返回`三`个参数不然就是后`两`个参数：第一个就是本身自己带的参数，第二个是`porp`，第三个是`scope`(`scope.row`)--就是当前行的数据；`scope.$index`就是当前行数
+GyTable/eventHandle
+:::
+
+### 单元格编辑--校验 rules
+
+:::demo `columns`: `columns`某一项的 rules;`table`: rules; `saveMethod方法`:singleEdit.value.saveMethod((data) => {console.log('callback 返回数据', data)})
+GyTable/rules
+:::
+
+### 单元格编辑--columns校验 <el-tag>v1.5.2</el-tag>
+
+:::demo `columns`: `columns`某一项的 rules;`table`: rules; `saveMethod方法`:singleEdit.value.saveMethod((data) => {console.log('callback 返回数据', data)});`save方法`：`const tableData = await singleEdit.value.save()`接收一个`Promise`对象。
+GyTable/rulesCol
+:::
+
+### 单元格编辑--TSelectTable 校验 rules
 
 :::demo
-GyTable/emptySlot
+GyTable/rulesSelectTable
 :::
 
-### Table empty-text使用
+### 单元格编辑-- 回显TSelectTable
 
 :::demo
-GyTable/emptyText
+GyTable/echoSelectTable
 :::
 
-### 双击单元格复制(默认不开启)
+### 单元格编辑--重置TSelectTable
 
-:::demo 若需要关闭（在 GyTable 标签中设置属性：`isCopy:true`）
-GyTable/isCopy
+:::demo 调用`resetTselectTable`方法，重置TSelectTable数据
+
+GyTable/rulesSelectTableRefs
 :::
 
-### 集成分页器
+### 单元格编辑--底部按钮插槽使用
+
+:::demo 标签添加`isShowFooterBtn`属性，展示保存按钮，并点击按钮触发 `save`事件，返回当前可编辑的所有数据；若需要`自定义操作区`则需要使用`footer`插槽；`footerBtnAlign`: GyTable 底部按钮对齐方式,有三个值：`left`、`center`、`right`。
+GyTable/footerSlot
+:::
+
+### 单元格编辑--单击开启模式 <el-tag>v1.4.15</el-tag>
 
 :::demo
-GyTable/isShowPagination
-:::
-
-### 分页器-设置 layout 自定义插槽使用
-
-:::demo
-GyTable/paginationSlot
-:::
-
-### 动态列显示隐藏<el-tag>1.4.16</el-tag>
-
-:::demo 在`columns`中某项动态设置`isShowCol`，默认`false`显示,`true`隐藏,也可以是`function`。
-GyTable/isShowCol
-:::
-
-### 字典过滤渲染
-
-:::demo `columns`中某项添加`filters: { list: 'statusList', key: 'id', label: 'label' }`；`table`中添加`listTypeInfo: { statusList:[数据源] }`字典类型的数据源
-GyTable/filters
-:::
-
-### 某列 render 渲染
-
-:::demo
-GyTable/render
-:::
-
-### 某列 作用域插槽渲染
-
-:::demo
-GyTable/slotName
-:::
-
-### 自定义表头渲染
-
-:::demo
-GyTable/renderHeader
-:::
-
-### 列--动态显示隐藏且拖动排序
-
-:::demo 在`GyTable标签`中设置`columnSetting`开启`并且`需要设置`name`属性且在项目中`必须`保持唯一性。属性`columnSetBind`配置更改 button 样式：继承`el-button`所有属性;
-GyTable/columnSetting
-:::
-
-### 行--拖拽排序
-
-:::demo 属性`isRowSort`是否开启行拖拽排序;事件`@rowSort`，三个返回值：排序后 table 数据，拖拽前`index`,拖拽后`index`;`注意`: `row-key` 需要设置，否则拖动排序可能显示不正常
-GyTable/rowSort
-:::
-
-### 行--拖拽排序第一列显示拖拽图标<el-tag>1.4.15</el-tag>
-
-:::demo 属性`isRowSort`是否开启行拖拽排序;属性`isRowSortIcon`是否仅显示第一列显示拖拽图标仅在`图标上进行拖拽`，配置属性`rowSortIconBind`；事件`@rowSort`，返回最终排序的 table 数据;`注意`: `row-key` 需要设置，否则拖动排序可能显示不正常
-GyTable/isRowSortIcon
-:::
-
-### 表头合并单元格（多级表头）
-
-:::demo 只需要配置`columns`中某项新增`children：Array[]`属性;表头合并自动加边框
-GyTable/multileHead
-:::
-
-### 表头合并（多级表头）-插槽使用
-
-:::demo 只需要配置`columns`中某项新增`children：Array[]`属性;表头合并自动加边框
-GyTable/slotNameMerge
-:::
-### 多级表头--自定义表头<el-tag>v1.5.1</el-tag>
-
-:::demo 只需在`columns`配置`renderHeader`,建议使用`tsx`或`jsx`编写
-GyTable/multileHeadRenderHeader
-:::
-
-### 多级表头--排序<el-tag>v1.5.2</el-tag>
-
-:::demo 在`columns`某一项中添加`sort:true`。在`columns`中设置`sortable:true`或在`标签中`设置`sortable:'custom'`触发`@sort-change`事件，需要在 `v1.5.2`中生效。
-GyTable/multileHeadSort
-:::
-
-### 多级表头--动态显示隐藏列<el-tag>v2.0.2</el-tag>
-
-:::demo 在`columns`中某项动态设置`isShowCol`，默认`false`显示,`true`隐藏,也可以是`function`。
-GyTable/isShowColMultileHead
-:::
-
-### 表格操作按钮
-
-:::demo `operator数组`：`operator 数组`是显示按钮数且点击后将当前行数据传出；`operatorConfig` 对象是操作列样式（可以设置宽度/列标题及是否固定在最左/右侧）；按钮的颜色是以 `ElementUI` 内置 `button` 的 `type` 为准；隐藏按钮——`noshow`:多种状态控制按钮的显示与隐藏；例如：`noshow:[{key:'fields',val:'isHasVal'},{key:'status',val:[0,1,99]},{key:'channelCode',val:['bank']}]`；注释： `noshow` 中的 `key` 值(fields/status/channelCode)是表格后台返回的字段； 当 `val` 等于字符串'isHasVal'时,字段'fields'返回为空时，此行操作按钮隐藏； `以上综合：`当'status'为 0/1/99 并且'channelCode'为'bank'及'fields'为空时；`show: { key: 'status', val: [3,4] }`表 status 值为 3 或者 4 时，显示此操作健 根据后台字段返回是数字还是字符串来显示
-GyTable/operator
-:::
-
-### 自定义操作按钮样式
-
-:::demo 设置`operator`数组中的`bind对象`继承`el-button`所有属性
-GyTable/operatorBtn
-:::
-
-### 操作按钮 render 方式
-
-:::demo 设置`operator`数组中的`render函数``遵循tsx方式`
-GyTable/operatorRender
-:::
-
-### 操作按钮插槽方式
-
-:::demo
-GyTable/operatorSlotName
-:::
-
-### 操作按钮--显示更多 <el-tag>v1.5.2</el-tag>
-
-:::demo 在`operator`操作列数组中设置`isMore`为true，即可显示更多按钮，默认鼠标移入显示下拉操作按钮，在`operatorConfig`中设置`dropdownBind`对象，可配置`btnBind`来配置更多按钮样式；`menuBind`来配置下拉菜单`el-dropdown-menu`样式。在`operator`每项中设置`itemBind`来配置`el-dropdown-item`样式
-
-GyTable/operatorMore
-:::
-
-### Tree-Table
-
-:::demo 按照`el-table`方式配置；新增`isTree`属性——其作用是布局 GyTable-Tree 样式
-GyTable/treeTable
-:::
-
-### 超级 TreeTable 使用
-
-:::demo 按照`el-table`方式配置
-GyTable/treeMenuTable
-:::
-
-### Tree菜单
-
-:::demo 按照`el-table`方式配置
-GyTable/menuMange
-:::
-
-
-### 展开行
-
-:::demo 在`table`对象中添加`firstColumn:{ type: 'expand', fixed: true }` `expand`作用域插槽，解构传出`{scope}`
-GyTable/expand
+GyTable/editSingle
 :::
 
 

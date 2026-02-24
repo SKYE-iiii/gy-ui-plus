@@ -22,8 +22,9 @@ export default defineConfig({
         {
           text: 'Basic 基础组件',
           items: [
-            { text: 'GyButton', link: '/components/gy-button' },
-            { text: 'GyTable', link: '/components/gy-table' },
+            { text: 'Button 按钮', link: '/components/gy-button' },
+            { text: 'Basic Table 表格', link: '/components/gy-table' },
+            { text: 'Editable Table 可编辑表格', link: '/components/gy-table-editable' },
           ],
         },
       ],
