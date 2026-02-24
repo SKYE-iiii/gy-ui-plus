@@ -14,7 +14,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '组件', link: '/components/gy-button.md' },
+      { text: '组件', link: '/components/gy-button' },
       { text: 'GitHub', link: 'https://github.com/SKYE-iiii/gy-ui-plus' },
     ],
     sidebar: {
