@@ -2,6 +2,8 @@
 
 一个基于 Vue 3 + Element Plus 二次封装的企业级 UI 组件库，提供高质量的封装组件，帮助开发者快速构建复杂的前端应用。
 
+**[在线文档（GitHub Pages）](https://skye-iiii.github.io/gy-ui-plus/)** — 点击可预览组件文档与示例。
+
 ## 特性
 
 - 基于 Vue 3 + TypeScript 开发，提供完整的类型定义
@@ -158,6 +160,13 @@ npm run docs:build
 # 预览构建后的文档
 npm run docs:preview
 ```
+
+### 文档部署（GitHub Pages）
+
+文档通过 GitHub Actions 自动部署到 GitHub Pages。推送代码到 `master` 或 `main` 分支后会触发部署。
+
+1. 在仓库 **Settings → Pages** 中，将 **Build and deployment → Source** 选为 **GitHub Actions**。
+2. 部署完成后，访问 [https://你的用户名.github.io/gy-ui-plus/](https://skye-iiii.github.io/gy-ui-plus/) 即可在线预览组件文档。
 
 ## 项目结构
 
