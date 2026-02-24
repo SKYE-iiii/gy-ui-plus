@@ -1,6 +1,6 @@
 {
   "name": "gy-ui-plus",
-  "version": "1.0.20",
+  "version": "1.0.22",
   "publishConfig": {
     "access": "public"
   },
@@ -8,19 +8,19 @@
   "license": "MIT",
   "private": false,
   "type": "module",
-  "main": "../dist/gy-ui-plus.umd.js",
-  "module": "../dist/gy-ui-plus.es.js",
-  "types": "../dist/index.d.ts",
+  "main": "./dist/gy-ui-plus.umd.js",
+  "module": "./dist/gy-ui-plus.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "../dist/index.d.ts",
-      "import": "../dist/gy-ui-plus.es.js",
-      "require": "../dist/gy-ui-plus.umd.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/gy-ui-plus.es.js",
+      "require": "./dist/gy-ui-plus.umd.js"
     },
-    "./style.css": "../dist/style.css"
+    "./style.css": "./dist/gy-ui-plus.css"
   },
   "files": [
-    "../dist"
+    "dist"
   ],
   "keywords": [
     "element-plus",
@@ -36,22 +36,19 @@
   "scripts": {
     "build": "vite build"
   },
-  "dependencies": {
-    "@gy-ui-plus/button": "workspace:*",
-    "@gy-ui-plus/table": "workspace:*",
-    "@gy-ui-plus/layout-page": "workspace:*",
-    "@gy-ui-plus/core": "workspace:*",
-    "axios": "^1.13.2",
-    "element-plus": "^2.13.1",
-    "sortablejs": "1.15.0",
-    "vue": "^3.5.27",
-    "vue-router": "^4.6.3"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "vue": "^3.5.27",
-    "element-plus": "^2.13.1"
+    "element-plus": "^2.13.1",
+    "axios": "^1.13.2",
+    "sortablejs": "1.15.0",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
+    "@gy-ui-plus/button": "workspace:*",
+    "@gy-ui-plus/core": "workspace:*",
+    "@gy-ui-plus/layout-page": "workspace:*",
+    "@gy-ui-plus/table": "workspace:*",
     "@prettier/plugin-oxc": "^0.0.5",
     "@tsconfig/node24": "^24.0.3",
     "@types/node": "^24.10.1",

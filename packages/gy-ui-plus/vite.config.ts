@@ -18,9 +18,9 @@ export default defineConfig({
       exclude: [
         resolve(__dirname, '../../packages/**/__tests__/**'),
         resolve(__dirname, '../../node_modules/**'),
-        resolve(__dirname, '../../dist/**'),
+        resolve(__dirname, 'dist/**'),
       ],
-      outDir: resolve(__dirname, '../../dist'),
+      outDir: resolve(__dirname, 'dist'),
       copyDtsFiles: true,
       rollupTypes: false,
       insertTypesEntry: true,
@@ -65,7 +65,7 @@ export default defineConfig({
         exports: 'named',
       },
     },
-    outDir: resolve(__dirname, '../../dist'),
+    outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
   },
 })

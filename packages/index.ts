@@ -2,6 +2,9 @@ import type { Component, App } from 'vue'
 import { GyButton } from '@gy-ui-plus/button'
 import { GyTable } from '@gy-ui-plus/table'
 import { GyLayoutPage } from '@gy-ui-plus/layout-page'
+// 统一引入组件样式，供构建时提取为 style.css
+import './table/style'
+import './layout-page/style'
 
 // 存储组件列表
 const components: {
